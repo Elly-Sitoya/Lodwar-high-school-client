@@ -112,12 +112,17 @@ const Homepage = () => {
             Lodwar High School
           </Typography>
           <Button color="inherit">Home</Button>
-          <Button color="inherit">About</Button>
+          <Button color="inherit" component={Link} to="/about">
+            About
+          </Button>
           <Button color="inherit" component={Link} to="/admissions">
             Admissions
           </Button>
           <Button color="inherit" component={Link} to="/academics">
             Academics
+          </Button>
+          <Button color="inherit" component={Link} to="/about">
+            About
           </Button>
           <Button color="inherit" component={Link} to="/contact">
             Contact

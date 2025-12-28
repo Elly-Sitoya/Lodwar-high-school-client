@@ -16,6 +16,7 @@ import ChooseUser from "./pages/ChooseUser";
 import AdmissionsPage from "./pages/AdmissionsPage";
 import AcademicsPage from "./pages/AcademicsPage";
 import ContactPage from "./pages/ContactPage";
+import AboutPage from "./pages/AboutPage";
 const App = () => {
   const { currentRole } = useSelector((state) => state.user);
 
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/admissions" element={<AdmissionsPage />} />
           <Route path="/academics" element={<AcademicsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/choose" element={<ChooseUser visitor="normal" />} />
           <Route
             path="/chooseasguest"
