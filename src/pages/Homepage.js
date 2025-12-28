@@ -153,6 +153,8 @@ const Homepage = () => {
           <Button
             variant="contained"
             sx={{ mt: 4, backgroundColor: "#f9a825" }}
+            component={Link}
+            to="/onlineadmissionform"
           >
             Apply for Admission
           </Button>
