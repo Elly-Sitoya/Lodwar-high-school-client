@@ -89,7 +89,7 @@
 // const StyledText = styled.p`
 //   /* color: #550080; */
 //   margin-top: 30px;
-//   margin-bottom: 30px; 
+//   margin-bottom: 30px;
 //   letter-spacing: normal;
 //   line-height: normal;
 // `;
@@ -97,11 +97,11 @@
 // const StyledLink = styled(Link)`
 //   text-decoration: none;
 // `;
-import React from 'react'
-import { Box, Button, Container, Grid, Typography } from '@mui/material'
-import { AppBar, Toolbar } from '@mui/material'
-import { Card, CardContent } from '@mui/material'
-
+import React from "react";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { AppBar, Toolbar } from "@mui/material";
+import { Card, CardContent } from "@mui/material";
+import { Link } from "react-router-dom";
 const Homepage = () => {
   return (
     <Box>
@@ -113,16 +113,23 @@ const Homepage = () => {
           </Typography>
           <Button color="inherit">Home</Button>
           <Button color="inherit">About</Button>
-          <Button color="inherit">Admissions</Button>
-          <Button color="inherit">Academics</Button>
-          <Button color="inherit">Contact</Button>
+          <Button color="inherit" component={Link} to="/admissions">
+            Admissions
+          </Button>
+          <Button color="inherit" component={Link} to="/academics">
+            Academics
+          </Button>
+          <Button color="inherit" component={Link} to="/contact">
+            Contact
+          </Button>
         </Toolbar>
       </AppBar>
 
       {/* HERO SECTION */}
       <Box
         sx={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f')",
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "70vh",
@@ -174,9 +181,18 @@ const Homepage = () => {
         <Container>
           <Grid container spacing={4}>
             {[
-              { title: "Quality Education", desc: "Highly qualified teachers and KCSE excellence." },
-              { title: "Modern Facilities", desc: "Well-equipped labs, library, and ICT rooms." },
-              { title: "Discipline & Values", desc: "Strong moral foundation and leadership training." },
+              {
+                title: "Quality Education",
+                desc: "Highly qualified teachers and KCSE excellence.",
+              },
+              {
+                title: "Modern Facilities",
+                desc: "Well-equipped labs, library, and ICT rooms.",
+              },
+              {
+                title: "Discipline & Values",
+                desc: "Strong moral foundation and leadership training.",
+              },
             ].map((item, index) => (
               <Grid item xs={12} md={4} key={index}>
                 <Card sx={{ height: "100%" }}>
@@ -197,12 +213,13 @@ const Homepage = () => {
       <Box sx={{ backgroundColor: "#0b3c5d", color: "white", py: 4 }}>
         <Container>
           <Typography align="center">
-            © {new Date().getFullYear()} Lodwar High School | Excellence is Our Pride
+            © {new Date().getFullYear()} Lodwar High School | Excellence is Our
+            Pride
           </Typography>
         </Container>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;
