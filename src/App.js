@@ -18,11 +18,14 @@ import AcademicsPage from "./pages/AcademicsPage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import OnlineAdmissionForm from "./pages/OnlineAdmissionForm";
+import GalleryPage from "./pages/GalleryPage";
+import Navbar from "./components/Navbar";
 const App = () => {
   const { currentRole } = useSelector((state) => state.user);
 
   return (
     <Router>
+      <Navbar />
       {currentRole === null && (
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -34,6 +37,7 @@ const App = () => {
             path="/onlineadmissionform"
             element={<OnlineAdmissionForm />}
           />
+          <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/choose" element={<ChooseUser visitor="normal" />} />
           <Route
             path="/chooseasguest"
