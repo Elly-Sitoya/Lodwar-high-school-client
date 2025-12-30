@@ -59,10 +59,12 @@ import { useState } from "react";
 import TenderTable from "./TenderTable";
 import TenderDialog from "./TenderDialog";
 import DeleteTenderDialog from "./DeleteTenderDialog";
+import TenderPreviewDialog from "./TenderPreviewDialog";
 
 const AdminTendersPage = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const [openDelete, setOpenDelete] = useState(false);
+  const [openPreview, setOpenPreview] = useState(false);
   const [selectedTender, setSelectedTender] = useState(null);
 
   // Mock Data with Status
@@ -73,6 +75,8 @@ const AdminTendersPage = () => {
       refNo: "LHS/PROC/01/2025",
       closingDate: "2025-03-15",
       status: "Open",
+      pdfUrl:
+        "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
     },
     {
       id: 2,
@@ -80,6 +84,8 @@ const AdminTendersPage = () => {
       refNo: "LHS/PROC/02/2024",
       closingDate: "2024-12-10",
       status: "Closed",
+      pdfUrl:
+        "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
     },
   ]);
 
@@ -158,6 +164,10 @@ const AdminTendersPage = () => {
           setOpenDelete(true);
         }}
         onToggleStatus={handleToggleStatus}
+        onPreview={(tender) => {
+          setSelectedTender(tender);
+          setOpenPreview(true);
+        }}
       />
 
       {/* Add / Edit Dialog */}
@@ -180,6 +190,16 @@ const AdminTendersPage = () => {
           setSelectedTender(null);
         }}
         onConfirm={handleDelete}
+      />
+
+      {/* Preview Dialog */}
+      <TenderPreviewDialog
+        open={openPreview}
+        onClose={() => {
+          setOpenPreview(false);
+          setSelectedTender(null);
+        }}
+        fileUrl={selectedTender?.pdfUrl}
       />
     </Box>
   );

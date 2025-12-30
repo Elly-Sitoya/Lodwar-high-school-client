@@ -92,7 +92,13 @@ import {
   Stack,
 } from "@mui/material";
 
-const TenderTable = ({ tenders, onEdit, onDelete, onToggleStatus }) => {
+const TenderTable = ({
+  tenders,
+  onEdit,
+  onDelete,
+  onToggleStatus,
+  onPreview,
+}) => {
   return (
     <Paper>
       <Table>
@@ -137,6 +143,13 @@ const TenderTable = ({ tenders, onEdit, onDelete, onToggleStatus }) => {
 
               <TableCell>
                 <Stack direction="row" spacing={1}>
+                  <Button
+                    size="small"
+                    color="info"
+                    onClick={() => onPreview(tender)}
+                  >
+                    View
+                  </Button>
                   <Button size="small" onClick={() => onEdit(tender)}>
                     Edit
                   </Button>
