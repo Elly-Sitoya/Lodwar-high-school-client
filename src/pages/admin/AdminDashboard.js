@@ -44,6 +44,7 @@ import AccountMenu from "../../components/AccountMenu";
 
 import AddGalleryImage from "./galleryRelated/AddGalleryImage";
 import ShowGalleryImages from "./galleryRelated/ShowGalleryImages";
+import AdminTendersPage from "./tenders/AdminTendersPage";
 
 const AdminDashboard = () => {
   const [open, setOpen] = useState(false);
@@ -102,6 +103,9 @@ const AdminDashboard = () => {
             {/* Gallery */}
             <Route path="/Admin/gallery" element={<ShowGalleryImages />} />
             <Route path="/Admin/gallery/add" element={<AddGalleryImage />} />
+
+            {/* Tenders */}
+            <Route path="/Admin/tenders" element={<AdminTendersPage />} />
 
             <Route path="/" element={<AdminHomePage />} />
             <Route path="*" element={<Navigate to="/" />} />
