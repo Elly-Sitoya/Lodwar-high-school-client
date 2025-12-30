@@ -10,7 +10,7 @@ import {
   CardMedia,
   CardContent,
 } from "@mui/material";
-
+import About from "../components/About/About";
 // Placeholder images for history and facilities
 const historyImages = [
   "https://images.unsplash.com/photo-1503676260728-1c00da094a0b",
@@ -25,6 +25,7 @@ const facilitiesImages = [
 
 const AboutPage = () => (
   <Box sx={{ p: { xs: 2, md: 5 } }}>
+    <About />
     {/* Hero Section */}
     <Box
       sx={{
@@ -53,17 +54,16 @@ const AboutPage = () => (
         A Word From Our School
       </Typography>
       <Typography paragraph>
-        Greetings from Lodwar High School — a community rooted in excellence and
-        purpose. Nestled in the heart of Turkana County, we have been nurturing
-        young minds since 1968. What began as a modest classroom with 40
-        learners has grown into a dynamic institution of learning, character,
-        and leadership.
+        Greetings from Lodwar High School — a national boys' secondary school in
+        Turkana County, rooted in excellence and purpose. Since its founding in
+        1968 by Monsignor John Mahon, we have been nurturing young minds to
+        become leaders of tomorrow.
       </Typography>
       <Typography paragraph>
-        At Lodwar High School, we are committed to empowering every student to
-        discover their potential, embrace resilience, and contribute to society
-        with confidence and integrity. Our story is one of growth,
-        determination, and community — because here, every student matters.
+        Led by Principal Patrick Lokwayen Esekon, we are committed to providing
+        a holistic education that nurtures discipline, academic excellence, and
+        integrity. Our school serves over 850 students, preparing them to
+        contribute to society with confidence.
       </Typography>
     </Paper>
 
