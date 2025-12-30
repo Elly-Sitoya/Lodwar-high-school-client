@@ -63,35 +63,6 @@ const AcademicsPage = () => {
             Academic Departments
           </Typography>
           <Departments />
-          <Grid container spacing={4} sx={{ mt: 2 }}>
-            {[
-              {
-                name: "Sciences Department",
-                desc: "Biology, Chemistry, Physics with modern laboratories.",
-              },
-              {
-                name: "Languages Department",
-                desc: "English and Kiswahili for effective communication.",
-              },
-              {
-                name: "Humanities Department",
-                desc: "History, Geography, and CRE for social awareness.",
-              },
-              {
-                name: "Technical Department",
-                desc: "Computer Studies and practical skills.",
-              },
-            ].map((dept, index) => (
-              <Grid item xs={12} md={3} key={index}>
-                <Card>
-                  <CardContent>
-                    <Typography fontWeight="bold">{dept.name}</Typography>
-                    <Typography sx={{ mt: 1 }}>{dept.desc}</Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
         </Container>
       </Box>
 

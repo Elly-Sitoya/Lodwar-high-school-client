@@ -8,17 +8,17 @@ const Departments = () => {
         <div className="sec-md-35">
           <div className="cards">
             <div className="card left-t">
-              <h2>Sciences</h2>
+              <h2>Sciences Department</h2>
               <p>
-                Equipped with modern laboratories for Biology, Chemistry, and
-                Physics to foster scientific inquiry and innovation.
+                Biology, Chemistry, Physics with modern laboratories fostering
+                scientific inquiry and innovation.
               </p>
             </div>
             <div className="card left-b">
-              <h2>Languages</h2>
+              <h2>Languages Department</h2>
               <p>
-                Developing masterly in English and functional skills in
-                Kiswahili for effective communication and expression.
+                English and Kiswahili for effective communication, expression,
+                and functional literacy.
               </p>
             </div>
           </div>
@@ -164,17 +164,17 @@ const Departments = () => {
         <div className="sec-md-35">
           <div className="cards">
             <div className="card right-t">
-              <h2>Humanities</h2>
+              <h2>Humanities Department</h2>
               <p>
-                Inculcating values and understanding of society through History,
-                Geography, and Religious Studies.
+                History, Geography, and CRE for social awareness, values, and
+                understanding of our heritage.
               </p>
             </div>
             <div className="card right-b">
-              <h2>Technical</h2>
+              <h2>Technical Department</h2>
               <p>
-                Fostering practical and technological skills in Agriculture,
-                Business, and Computer Studies.
+                Computer Studies and practical skills in Agriculture and
+                Business to prepare students for the modern world.
               </p>
             </div>
           </div>

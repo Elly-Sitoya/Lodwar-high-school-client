@@ -4,7 +4,7 @@ body {
   margin: 0;
 }
 .mazi-container {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background: #f2ecfd;
   background: linear-gradient(135deg, #f2ecfd 0%, #e8dbfc 100%);
