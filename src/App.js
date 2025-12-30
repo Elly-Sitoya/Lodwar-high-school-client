@@ -21,7 +21,7 @@ import OnlineAdmissionForm from "./pages/OnlineAdmissionForm";
 import GalleryPage from "./pages/GalleryPage";
 import Navbar from "./components/Navbar";
 import TendersPage from "./pages/TendersPage";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 const App = () => {
   const { currentRole } = useSelector((state) => state.user);
 
@@ -29,33 +29,42 @@ const App = () => {
     <Router>
       <Navbar />
       {currentRole === null && (
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/admissions" element={<AdmissionsPage />} />
-          <Route path="/academics" element={<AcademicsPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route
-            path="/onlineadmissionform"
-            element={<OnlineAdmissionForm />}
-          />
-          <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/tenders" element={<TendersPage />} />
-          {/* <Route path="/footer" element={<Footer />} /> */}
-          <Route path="/choose" element={<ChooseUser visitor="normal" />} />
-          <Route
-            path="/chooseasguest"
-            element={<ChooseUser visitor="guest" />}
-          />
+        <>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/admissions" element={<AdmissionsPage />} />
+            <Route path="/academics" element={<AcademicsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route
+              path="/onlineadmissionform"
+              element={<OnlineAdmissionForm />}
+            />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/tenders" element={<TendersPage />} />
+            {/* <Route path="/footer" element={<Footer />} /> */}
+            <Route path="/choose" element={<ChooseUser visitor="normal" />} />
+            <Route
+              path="/chooseasguest"
+              element={<ChooseUser visitor="guest" />}
+            />
 
-          <Route path="/Adminlogin" element={<LoginPage role="Admin" />} />
-          <Route path="/Studentlogin" element={<LoginPage role="Student" />} />
-          <Route path="/Teacherlogin" element={<LoginPage role="Teacher" />} />
+            <Route path="/Adminlogin" element={<LoginPage role="Admin" />} />
+            <Route
+              path="/Studentlogin"
+              element={<LoginPage role="Student" />}
+            />
+            <Route
+              path="/Teacherlogin"
+              element={<LoginPage role="Teacher" />}
+            />
 
-          <Route path="/Adminregister" element={<AdminRegisterPage />} />
+            <Route path="/Adminregister" element={<AdminRegisterPage />} />
 
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+          <Footer />
+        </>
       )}
 
       {currentRole === "Admin" && (

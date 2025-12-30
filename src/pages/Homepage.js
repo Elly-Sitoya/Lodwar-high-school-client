@@ -4,6 +4,9 @@ import { Card, CardContent } from "@mui/material";
 import { Link } from "react-router-dom";
 import Admissions from "../components/LandingPage/Admissions";
 import Testimonials from "../components/Testimonials/Testimonials";
+import Hero_1 from "../assets/hero_1.jpg";
+import about_1 from "../assets/about_1.jpg";
+import about_2 from "../assets/about_2.jpg";
 
 const Homepage = () => {
   return (
@@ -11,8 +14,7 @@ const Homepage = () => {
       {/* HERO SECTION */}
       <Box
         sx={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f')",
+          backgroundImage: `url(${Hero_1})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "70vh",
@@ -53,7 +55,7 @@ const Homepage = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <img
-              src="https://images.unsplash.com/photo-1588072432836-e10032774350"
+              src={about_2}
               alt="school"
               style={{ width: "100%", borderRadius: 8 }}
             />

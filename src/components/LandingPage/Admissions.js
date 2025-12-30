@@ -1,5 +1,6 @@
 import React from "react";
 import "./Admissions.css";
+
 const Admissions = () => {
   return (
     <section className="experience-grid">

@@ -42,8 +42,7 @@
 }
 .experience-grid-portraitpic-item {
   grid-area: portraitpic;
-  background: url("https://ironcodestudio.com/wp-content/uploads/2015/03/css-remove-horizontal-scrollbar.jpg")
-    no-repeat center center;
+  background: url("../../assets/adm_1.jpg") no-repeat center center;
   background-size: cover;
   border-radius: 50px;
   border-color: rgba(0, 136, 169, 1);
@@ -52,8 +51,7 @@
 }
 .experience-grid-landscape-item {
   grid-area: xlandscape;
-  background: url("https://upload.wikimedia.org/wikipedia/commons/0/0f/Eiffel_Tower_Vertical.JPG")
-    no-repeat center center;
+  background: url("../../assets/adm_3.jpg") no-repeat center center;
   background-size: cover;
   border-radius: 50px;
   border-color: rgba(0, 136, 169, 1);
@@ -62,8 +60,7 @@
 }
 .experience-grid-littlepic-item {
   grid-area: littlepic;
-  background: url("https://ipt.imgix.net/205980/x/0/horizontal-lines-as-a-compositional-tool-in-photography-3.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883")
-    no-repeat center center;
+  background: url("../../assets/adm_2.jpg") no-repeat center center;
   background-size: cover;
   border-radius: 50px;
   border-color: rgba(0, 136, 169, 1);
@@ -72,8 +69,7 @@
 }
 .experience-grid-littlepic1-item {
   grid-area: littlepic1;
-  background: url("https://ipt.imgix.net/205979/x/0/horizontal-lines-as-a-compositional-tool-in-photography-2.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883")
-    no-repeat center center;
+  background: url("../../assets/adm_4.jpg") no-repeat center center;
   background-size: cover;
   border-radius: 50px;
   border-color: rgba(0, 136, 169, 1);
