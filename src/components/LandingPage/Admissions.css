@@ -1,0 +1,118 @@
+.experience-grid {
+  background-color: #242424;
+  height: calc(var(--vh, 1vh) * 90);
+  display: grid;
+  grid-template-columns: 25% 35% 5% 15% 15% 5%;
+  grid-template-rows: 5% 30% 25% 35% 5%;
+  grid-template-areas:
+    "filler1 filler1 filler1 filler1 filler1 filler1"
+    "text text space portraitpic portraitpic filli"
+    "text text space xlandscape littlepic filli"
+    "text text space xlandscape littlepic1 filli"
+    "filler filler filler filler filler filler";
+  column-gap: 10px;
+  row-gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-grid h1 {
+  color: azure;
+  text-align: center;
+  font-size: 5.25203vw;
+  font-family: sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+.experience {
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
+.experience h1 {
+  text-align: center;
+  font-size: 3.25203vw;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: azure;
+}
+
+.experience-grid-text-item {
+  grid-area: text;
+}
+.experience-grid-portraitpic-item {
+  grid-area: portraitpic;
+  background: url("https://ironcodestudio.com/wp-content/uploads/2015/03/css-remove-horizontal-scrollbar.jpg")
+    no-repeat center center;
+  background-size: cover;
+  border-radius: 50px;
+  border-color: rgba(0, 136, 169, 1);
+  border-width: 0px 10px;
+  border: solid rgba(0, 136, 169, 1);
+}
+.experience-grid-landscape-item {
+  grid-area: xlandscape;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/0/0f/Eiffel_Tower_Vertical.JPG")
+    no-repeat center center;
+  background-size: cover;
+  border-radius: 50px;
+  border-color: rgba(0, 136, 169, 1);
+  border-width: 0px 10px;
+  border: solid rgba(0, 136, 169, 1);
+}
+.experience-grid-littlepic-item {
+  grid-area: littlepic;
+  background: url("https://ipt.imgix.net/205980/x/0/horizontal-lines-as-a-compositional-tool-in-photography-3.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883")
+    no-repeat center center;
+  background-size: cover;
+  border-radius: 50px;
+  border-color: rgba(0, 136, 169, 1);
+  border-width: 0px 10px;
+  border: solid rgba(0, 136, 169, 1);
+}
+.experience-grid-littlepic1-item {
+  grid-area: littlepic1;
+  background: url("https://ipt.imgix.net/205979/x/0/horizontal-lines-as-a-compositional-tool-in-photography-2.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883")
+    no-repeat center center;
+  background-size: cover;
+  border-radius: 50px;
+  border-color: rgba(0, 136, 169, 1);
+  border-width: 0px 10px;
+  border: solid rgba(0, 136, 169, 1);
+}
+
+.experience-inside-text {
+  margin-right: 10%;
+  margin-left: 20%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border-left: 10px solid rgba(0, 136, 169, 1);
+}
+.experience-inside-text h1 {
+  text-align: center;
+  font-size: 2.25203vw;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: azure;
+  text-align: left;
+  margin-left: 10px;
+}
+.experience-inside-text h2 {
+  text-align: center;
+  font-size: 1.55203vw;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: rgba(240, 255, 255, 0.8);
+  text-align: left;
+  margin-left: 10px;
+}
+.experience-inside-text h3 {
+  text-align: center;
+  font-size: 1.05203vw;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: rgba(240, 255, 255, 0.5);
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 20px;
+}

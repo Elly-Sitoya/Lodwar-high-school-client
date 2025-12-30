@@ -102,6 +102,7 @@ import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { AppBar, Toolbar } from "@mui/material";
 import { Card, CardContent } from "@mui/material";
 import { Link } from "react-router-dom";
+import Admissions from "../components/LandingPage/Admissions";
 const Homepage = () => {
   return (
     <Box>
@@ -213,6 +214,7 @@ const Homepage = () => {
               </Grid>
             ))}
           </Grid>
+          <Admissions />
         </Container>
       </Box>
 
