@@ -100,8 +100,8 @@ const TenderTable = ({
   onPreview,
 }) => {
   return (
-    <Paper>
-      <Table>
+    <Paper sx={{ overflowX: "auto" }}>
+      <Table sx={{ minWidth: 650 }}>
         <TableHead>
           <TableRow>
             <TableCell>
