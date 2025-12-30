@@ -29,6 +29,7 @@ const Navbar = () => {
     { label: "Academics", path: "/academics" },
     { label: "Gallery", path: "/gallery" },
     { label: "Contact", path: "/contact" },
+    { label: "Tenders", path: "/tenders" },
   ];
 
   const drawer = (
