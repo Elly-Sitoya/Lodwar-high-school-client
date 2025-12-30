@@ -103,14 +103,14 @@ const Homepage = () => {
       </Box>
 
       {/* FOOTER */}
-      <Box sx={{ backgroundColor: "#0b3c5d", color: "white", py: 4 }}>
+      {/* <Box sx={{ backgroundColor: "#0b3c5d", color: "white", py: 4 }}>
         <Container>
           <Typography align="center">
             © {new Date().getFullYear()} Lodwar High School | Excellence is Our
             Pride
           </Typography>
         </Container>
-      </Box>
+      </Box> */}
     </Box>
   );
 };
