@@ -1,15 +1,73 @@
+// import { Box, Typography, Button } from "@mui/material";
+// import { useState } from "react";
+// import TenderDialog from "./TenderDialog";
+// import TenderTable from "./TenderTable";
+// import DeleteTenderDialog from "./DeleteTenderDialog";
+
+// const AdminTendersPage = () => {
+//   const [openDialog, setOpenDialog] = useState(false);
+//   const [openDelete, setOpenDelete] = useState(false);
+//   const [selectedTender, setSelectedTender] = useState(null);
+
+//   return (
+//     <Box>
+//       <Box display="flex" justifyContent="space-between" mb={3}>
+//         <Typography variant="h4" fontWeight="bold">
+//           Tenders Management
+//         </Typography>
+//         <Button variant="contained" onClick={() => setOpenDialog(true)}>
+//           New Tender
+//         </Button>
+//       </Box>
+
+//       <TenderTable
+//         onEdit={(t) => {
+//           setSelectedTender(t);
+//           setOpenDialog(true);
+//         }}
+//         onDelete={(t) => {
+//           setSelectedTender(t);
+//           setOpenDelete(true);
+//         }}
+//       />
+
+//       <TenderDialog
+//         open={openDialog}
+//         tender={selectedTender}
+//         onClose={() => {
+//           setOpenDialog(false);
+//           setSelectedTender(null);
+//         }}
+//       />
+
+//       <DeleteTenderDialog
+//         open={openDelete}
+//         tender={selectedTender}
+//         onClose={() => {
+//           setOpenDelete(false);
+//           setSelectedTender(null);
+//         }}
+//       />
+//     </Box>
+//   );
+// };
+
+// export default AdminTendersPage;
+
 import { Box, Typography, Button } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
 import { useState } from "react";
-import TenderUploadDialog from "./TenderUploadDialog";
 import TenderTable from "./TenderTable";
+import TenderDialog from "./TenderDialog";
+import DeleteTenderDialog from "./DeleteTenderDialog";
 
 const AdminTendersPage = () => {
-  const [openUpload, setOpenUpload] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
+  const [openDelete, setOpenDelete] = useState(false);
+  const [selectedTender, setSelectedTender] = useState(null);
 
   return (
     <Box>
-      {/* Page Header */}
+      {/* Header */}
       <Box
         sx={{
           display: "flex",
@@ -22,22 +80,41 @@ const AdminTendersPage = () => {
           Tenders Management
         </Typography>
 
-        <Button
-          variant="contained"
-          startIcon={<AddIcon />}
-          onClick={() => setOpenUpload(true)}
-        >
+        <Button variant="contained" onClick={() => setOpenDialog(true)}>
           New Tender
         </Button>
       </Box>
 
-      {/* Tenders Table */}
-      <TenderTable />
+      {/* Table */}
+      <TenderTable
+        onEdit={(tender) => {
+          setSelectedTender(tender);
+          setOpenDialog(true);
+        }}
+        onDelete={(tender) => {
+          setSelectedTender(tender);
+          setOpenDelete(true);
+        }}
+      />
 
-      {/* Upload Dialog */}
-      <TenderUploadDialog
-        open={openUpload}
-        onClose={() => setOpenUpload(false)}
+      {/* Add / Edit Dialog */}
+      <TenderDialog
+        open={openDialog}
+        tender={selectedTender}
+        onClose={() => {
+          setOpenDialog(false);
+          setSelectedTender(null);
+        }}
+      />
+
+      {/* Delete Dialog */}
+      <DeleteTenderDialog
+        open={openDelete}
+        tender={selectedTender}
+        onClose={() => {
+          setOpenDelete(false);
+          setSelectedTender(null);
+        }}
       />
     </Box>
   );
