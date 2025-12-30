@@ -6,18 +6,18 @@ import {
   Typography,
 } from "@mui/material";
 
-const DeleteTenderDialog = ({ open, onClose, tender, onConfirm }) => {
+const DeleteStudentDialog = ({ open, onClose, student }) => {
   const handleDelete = () => {
-    onConfirm();
+    console.log("Deleting student:", student);
+    onClose();
   };
 
   return (
     <Dialog open={open} onClose={onClose}>
-      <DialogTitle>Delete Tender</DialogTitle>
+      <DialogTitle>Delete Student</DialogTitle>
 
       <Typography sx={{ px: 3, py: 1 }}>
-        Are you sure you want to delete <b>{tender?.title}</b>? This action
-        cannot be undone.
+        Are you sure you want to delete <b>{student?.name}</b>?
       </Typography>
 
       <DialogActions>
@@ -30,4 +30,4 @@ const DeleteTenderDialog = ({ open, onClose, tender, onConfirm }) => {
   );
 };
 
-export default DeleteTenderDialog;
+export default DeleteStudentDialog;

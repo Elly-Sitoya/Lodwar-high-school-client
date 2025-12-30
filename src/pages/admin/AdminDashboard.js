@@ -46,6 +46,8 @@ import AddGalleryImage from "./galleryRelated/AddGalleryImage";
 import ShowGalleryImages from "./galleryRelated/ShowGalleryImages";
 import AdminTendersPage from "./tenders/AdminTendersPage";
 
+import AdminAdmissionsPage from "./admissions/AdminAdmissionsPage";
+
 const AdminDashboard = () => {
   const [open, setOpen] = useState(false);
   const toggleDrawer = () => {
@@ -106,6 +108,9 @@ const AdminDashboard = () => {
 
             {/* Tenders */}
             <Route path="/Admin/tenders" element={<AdminTendersPage />} />
+
+            {/* Admissions */}
+            <Route path="/Admin/admissions" element={<AdminAdmissionsPage />} />
 
             <Route path="/" element={<AdminHomePage />} />
             <Route path="*" element={<Navigate to="/" />} />

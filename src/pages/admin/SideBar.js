@@ -19,6 +19,7 @@ import ReportIcon from "@mui/icons-material/Report";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import GavelIcon from "@mui/icons-material/Gavel";
+import PersonAddalt1Icon from "@mui/icons-material/PersonAddAlt1";
 
 const SideBar = () => {
   const location = useLocation();
@@ -133,6 +134,18 @@ const SideBar = () => {
             />
           </ListItemIcon>
           <ListItemText primary="Tenders" />
+        </ListItemButton>
+        <ListItemButton component={Link} to="/Admin/admissions">
+          <ListItemIcon>
+            <PersonAddalt1Icon
+              color={
+                location.pathname.startsWith("/Admin/admissions")
+                  ? "primary"
+                  : "inherit"
+              }
+            />
+          </ListItemIcon>
+          <ListItemText primary="Admissions" />
         </ListItemButton>
       </React.Fragment>
       <Divider sx={{ my: 1 }} />
