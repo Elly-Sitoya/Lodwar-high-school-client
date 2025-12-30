@@ -106,7 +106,7 @@ const Homepage = () => {
   return (
     <Box>
       {/* NAVBAR */}
-      <AppBar position="static" sx={{ backgroundColor: "#0b3c5d" }}>
+      {/* <AppBar position="static" sx={{ backgroundColor: "#0b3c5d" }}>
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             Lodwar High School
@@ -128,7 +128,7 @@ const Homepage = () => {
             Contact
           </Button>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
 
       {/* HERO SECTION */}
       <Box

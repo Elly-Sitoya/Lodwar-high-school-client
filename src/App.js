@@ -20,6 +20,7 @@ import AboutPage from "./pages/AboutPage";
 import OnlineAdmissionForm from "./pages/OnlineAdmissionForm";
 import GalleryPage from "./pages/GalleryPage";
 import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
 const App = () => {
   const { currentRole } = useSelector((state) => state.user);
 
@@ -38,6 +39,7 @@ const App = () => {
             element={<OnlineAdmissionForm />}
           />
           <Route path="/gallery" element={<GalleryPage />} />
+          {/* <Route path="/footer" element={<Footer />} /> */}
           <Route path="/choose" element={<ChooseUser visitor="normal" />} />
           <Route
             path="/chooseasguest"
