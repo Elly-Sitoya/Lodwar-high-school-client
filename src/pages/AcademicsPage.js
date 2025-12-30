@@ -7,6 +7,7 @@ import {
   Card,
   CardContent,
 } from "@mui/material";
+import Departments from "../components/Departments/Departments";
 
 const AcademicsPage = () => {
   return (
@@ -61,6 +62,7 @@ const AcademicsPage = () => {
           <Typography variant="h4" fontWeight="bold">
             Academic Departments
           </Typography>
+          <Departments />
           <Grid container spacing={4} sx={{ mt: 2 }}>
             {[
               {
