@@ -41,10 +41,9 @@ import {
   Typography,
 } from "@mui/material";
 
-const DeleteTenderDialog = ({ open, onClose, tender }) => {
+const DeleteTenderDialog = ({ open, onClose, tender, onConfirm }) => {
   const handleDelete = () => {
-    console.log("Deleting tender:", tender);
-    onClose();
+    onConfirm();
   };
 
   return (

@@ -65,6 +65,61 @@ const AdminTendersPage = () => {
   const [openDelete, setOpenDelete] = useState(false);
   const [selectedTender, setSelectedTender] = useState(null);
 
+  // Mock Data with Status
+  const [tenders, setTenders] = useState([
+    {
+      id: 1,
+      title: "Supply of Foodstuffs",
+      refNo: "LHS/PROC/01/2025",
+      closingDate: "2025-03-15",
+      status: "Open",
+    },
+    {
+      id: 2,
+      title: "Transport Services",
+      refNo: "LHS/PROC/02/2024",
+      closingDate: "2024-12-10",
+      status: "Closed",
+    },
+  ]);
+
+  const handleCreateOrUpdate = (tenderData) => {
+    // In a real app, this would be an API call
+    if (selectedTender) {
+      // Update
+      setTenders((prev) =>
+        prev.map((t) =>
+          t.id === selectedTender.id ? { ...t, ...tenderData } : t
+        )
+      );
+    } else {
+      // Create
+      setTenders((prev) => [
+        ...prev,
+        {
+          id: Date.now(),
+          ...tenderData,
+          status: "Open", // Default status for new items
+        },
+      ]);
+    }
+    setOpenDialog(false);
+    setSelectedTender(null);
+  };
+
+  const handleDelete = () => {
+    setTenders((prev) => prev.filter((t) => t.id !== selectedTender.id));
+    setOpenDelete(false);
+    setSelectedTender(null);
+  };
+
+  const handleToggleStatus = (tender) => {
+    const newStatus = tender.status === "Open" ? "Closed" : "Open";
+    setTenders((prev) =>
+      prev.map((t) => (t.id === tender.id ? { ...t, status: newStatus } : t))
+    );
+  };
+
   return (
     <Box>
       {/* Header */}
@@ -80,13 +135,20 @@ const AdminTendersPage = () => {
           Tenders Management
         </Typography>
 
-        <Button variant="contained" onClick={() => setOpenDialog(true)}>
+        <Button
+          variant="contained"
+          onClick={() => {
+            setSelectedTender(null);
+            setOpenDialog(true);
+          }}
+        >
           New Tender
         </Button>
       </Box>
 
       {/* Table */}
       <TenderTable
+        tenders={tenders}
         onEdit={(tender) => {
           setSelectedTender(tender);
           setOpenDialog(true);
@@ -95,6 +157,7 @@ const AdminTendersPage = () => {
           setSelectedTender(tender);
           setOpenDelete(true);
         }}
+        onToggleStatus={handleToggleStatus}
       />
 
       {/* Add / Edit Dialog */}
@@ -105,6 +168,7 @@ const AdminTendersPage = () => {
           setOpenDialog(false);
           setSelectedTender(null);
         }}
+        onSubmit={handleCreateOrUpdate}
       />
 
       {/* Delete Dialog */}
@@ -115,6 +179,7 @@ const AdminTendersPage = () => {
           setOpenDelete(false);
           setSelectedTender(null);
         }}
+        onConfirm={handleDelete}
       />
     </Box>
   );

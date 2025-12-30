@@ -104,7 +104,7 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 
-const TenderDialog = ({ open, onClose, tender }) => {
+const TenderDialog = ({ open, onClose, tender, onSubmit }) => {
   const isEdit = Boolean(tender);
 
   const [form, setForm] = useState({
@@ -120,15 +120,20 @@ const TenderDialog = ({ open, onClose, tender }) => {
         refNo: tender.refNo,
         closingDate: tender.closingDate,
       });
+    } else {
+      setForm({
+        title: "",
+        refNo: "",
+        closingDate: "",
+      });
     }
-  }, [tender]);
+  }, [tender, open]);
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = () => {
-    console.log(isEdit ? "Updating tender:" : "Creating tender:", form);
-    onClose();
+    onSubmit(form);
   };
 
   return (
