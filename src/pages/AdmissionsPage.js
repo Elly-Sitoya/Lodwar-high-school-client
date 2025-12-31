@@ -11,6 +11,8 @@ import {
 } from "@mui/material";
 import AdmProcess from "../components/AdmProcess/AdmProcess";
 import AdmRequirements from "../components/AdmRequirements/AdmRequirements";
+import AdmissionsHero from "../assets/admissions_hero.jpg";
+import AdmissionsHero2 from "../assets/admissions_hero_2.jpg";
 
 const AdmissionsPage = () => {
   return (
@@ -22,8 +24,7 @@ const AdmissionsPage = () => {
           color: "white",
           py: 8,
           textAlign: "center",
-          backgroundImage:
-            "linear-gradient(rgba(11, 60, 93, 0.8), rgba(11, 60, 93, 0.8)), url('https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80')",
+          backgroundImage: `linear-gradient(rgba(11, 60, 93, 0.8), rgba(11, 60, 93, 0.8)), url(${AdmissionsHero2})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

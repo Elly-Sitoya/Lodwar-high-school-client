@@ -8,6 +8,7 @@ import {
   FaCalculator,
   FaBook,
 } from "react-icons/fa";
+import academics from "../../assets/academics.jpg";
 
 const subjectCategories = [
   {
@@ -44,10 +45,7 @@ const SubjectsOffered = () => {
         <div className="subjects-grid">
           <div className="subjects-image-column">
             <div className="image-holder">
-              <img
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80"
-                alt="lodwar high school learning"
-              />
+              <img src={academics} alt="lodwar high school learning" />
               <div className="experience-tag">
                 <h3>50+ Years</h3>
                 <p>Academic Excellence</p>

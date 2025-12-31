@@ -15,6 +15,7 @@ import {
   Groups,
   Lightbulb,
 } from "@mui/icons-material";
+import chapel from "../assets/chapel.jpg";
 
 const ChapelPage = () => {
   return (
@@ -101,7 +102,7 @@ const ChapelPage = () => {
             >
               <Box
                 component="img"
-                src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80"
+                src={chapel}
                 alt="Chapel Interior"
                 sx={{ width: "100%", height: "auto", display: "block" }}
               />

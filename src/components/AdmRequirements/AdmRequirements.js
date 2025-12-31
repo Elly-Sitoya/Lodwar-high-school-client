@@ -8,6 +8,7 @@ import {
   FaExchangeAlt,
   FaCheckCircle,
 } from "react-icons/fa";
+import AdmissionsHero2 from "../../assets/admissions_hero_2.jpg";
 
 const requirements = [
   {
@@ -68,7 +69,7 @@ const AdmRequirements = () => {
           <div className="requirements-visual">
             <div className="image-stack">
               <img
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80"
+                src={AdmissionsHero2}
                 alt="School Environment"
                 className="main-img"
               />

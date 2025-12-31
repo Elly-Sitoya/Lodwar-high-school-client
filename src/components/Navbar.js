@@ -21,6 +21,7 @@ import SchoolIcon from "@mui/icons-material/School";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -121,7 +122,8 @@ const Navbar = () => {
               sx={{ flexGrow: 1 }}
             >
               <Box className="school-icon-container">
-                <SchoolIcon />
+                {/* <SchoolIcon /> */}
+                <img src={logo} alt="Logo" />
               </Box>
               <Typography
                 variant="h5"
