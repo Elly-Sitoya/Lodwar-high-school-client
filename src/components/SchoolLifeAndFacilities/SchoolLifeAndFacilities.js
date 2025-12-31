@@ -8,6 +8,12 @@ import {
   FaLaptop,
   FaBed,
 } from "react-icons/fa";
+import facility_1 from "../../assets/facility_1.jpg";
+import facility_2 from "../../assets/facility_2.jpg";
+import facility_3 from "../../assets/facility_3.jpg";
+import facility_4 from "../../assets/facility_4.jpg";
+import facility_5 from "../../assets/facility_5.jpg";
+import facility_6 from "../../assets/facility_6.jpg";
 
 const facilities = [
   {
@@ -15,48 +21,42 @@ const facilities = [
     title: "Science Laboratories",
     description:
       "Equipped with modern apparatus for Physics, Chemistry, and Biology to foster hands-on scientific discovery and innovation.",
-    image:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80",
+    image: facility_1,
   },
   {
     icon: <FaBook />,
     title: "Modern Library",
     description:
       "A sanctuary for knowledge featuring a vast collection of academic books, journals, and a dedicated e-learning center.",
-    image:
-      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80",
+    image: facility_2,
   },
   {
     icon: <FaRunning />,
     title: "Sports & Athletics",
     description:
       "Diverse facilities including a football pitch, basketball courts, and athletics track to nurture physical health and teamwork.",
-    image:
-      "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&q=80",
+    image: facility_3,
   },
   {
     icon: <FaLaptop />,
     title: "Computer Lab",
     description:
       "High-speed internet and modern workstations providing students with essential digital literacy and programming skills.",
-    image:
-      "https://images.unsplash.com/photo-1584697964154-8b25d6a2a3cf?auto=format&fit=crop&q=80",
+    image: facility_4,
   },
   {
     icon: <FaUtensils />,
     title: "Dining & Nutrition",
     description:
       "A spacious dining hall serving balanced, nutritious meals prepared under strict hygienic standards.",
-    image:
-      "https://images.unsplash.com/photo-1557682250-cc3f3d9ad81e?auto=format&fit=crop&q=80",
+    image: facility_5,
   },
   {
     icon: <FaBed />,
     title: "Secure Boarding",
     description:
       "Comfortable and safe hostels designed to provide a home-away-from-home environment for our boarding students.",
-    image:
-      "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&q=80",
+    image: facility_6,
   },
 ];
 

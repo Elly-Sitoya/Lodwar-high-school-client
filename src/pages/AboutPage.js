@@ -25,6 +25,9 @@ import About from "../components/About/About";
 import SchoolWord from "../components/SchoolWord/SchoolWord";
 import SchoolLifeAndFacilities from "../components/SchoolLifeAndFacilities/SchoolLifeAndFacilities";
 import AcademicAchievements from "../components/AcademicAchievements/AcademicAchievements";
+import About_hero from "../assets/about_hero_1.jpg";
+
+import AboutNews from "../assets/facility_3.jpg";
 
 const AboutPage = () => {
   const cardStyle = {
@@ -78,7 +81,7 @@ const AboutPage = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: `linear-gradient(rgba(13, 71, 161, 0.7), rgba(13, 71, 161, 0.7)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`,
+            backgroundImage: `linear-gradient(rgba(13, 71, 161, 0.7), rgba(13, 71, 161, 0.7)), url(${About_hero})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             zIndex: 1,
@@ -305,7 +308,7 @@ const AboutPage = () => {
             p: { xs: 6, md: 10 },
             mt: 8,
             borderRadius: "40px",
-            background: `linear-gradient(135deg, rgba(13, 71, 161, 0.95) 0%, rgba(21, 101, 192, 0.85) 50%, rgba(13, 71, 161, 0.95) 100%), url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`,
+            background: `linear-gradient(135deg, rgba(13, 71, 161, 0.95) 0%, rgba(21, 101, 192, 0.85) 50%, rgba(13, 71, 161, 0.95) 100%), url(${AboutNews})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             color: "white",
