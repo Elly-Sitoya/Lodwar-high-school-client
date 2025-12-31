@@ -9,6 +9,7 @@ import {
   CardContent,
   Box,
 } from "@mui/material";
+import AdmProcess from "../components/AdmProcess/AdmProcess";
 
 const AdmissionsPage = () => {
   return (
@@ -41,30 +42,7 @@ const AdmissionsPage = () => {
       </Container>
 
       {/* APPLICATION PROCESS */}
-      <Box sx={{ backgroundColor: "#f5f5f5", py: 6 }}>
-        <Container>
-          <Typography variant="h4" fontWeight="bold">
-            Application Process
-          </Typography>
-          <Grid container spacing={4} sx={{ mt: 2 }}>
-            {[
-              "Obtain admission form from the school or online portal",
-              "Submit required documents",
-              "Attend interview or selection if required",
-              "Receive admission letter upon acceptance",
-            ].map((step, index) => (
-              <Grid item xs={12} md={3} key={index}>
-                <Card>
-                  <CardContent>
-                    <Typography fontWeight="bold">Step {index + 1}</Typography>
-                    <Typography sx={{ mt: 1 }}>{step}</Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </Box>
+      <AdmProcess />
 
       {/* APPLY CTA */}
       <Container sx={{ py: 6, textAlign: "center" }}>
