@@ -1,0 +1,126 @@
+.contact-section {
+  padding: 80px 0;
+  background-color: #f8fafc;
+}
+
+.section-title {
+  font-weight: 800 !important;
+  color: #0b3c5d;
+  margin-bottom: 16px !important;
+}
+
+.section-subtitle {
+  color: #64748b;
+  margin-bottom: 32px !important;
+  font-size: 1.1rem !important;
+}
+
+.contact-card {
+  height: 100%;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.icon-wrapper {
+  background-color: rgba(11, 60, 93, 0.1);
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.contact-icon {
+  color: #0b3c5d;
+}
+
+.card-title {
+  font-weight: 700 !important;
+  color: #1e293b;
+  margin-bottom: 8px !important;
+}
+
+.card-detail {
+  color: #64748b;
+  line-height: 1.5 !important;
+}
+
+.social-icon {
+  background-color: #fff !important;
+  color: #0b3c5d !important;
+  margin-right: 12px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.2s ease !important;
+}
+
+.social-icon:hover {
+  background-color: #0b3c5d !important;
+  color: #fff !important;
+  transform: scale(1.1);
+}
+
+.form-card {
+  border-radius: 24px !important;
+  padding: 24px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  background: white;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+
+.form-title {
+  font-weight: 800 !important;
+  color: #0b3c5d;
+  margin-bottom: 24px !important;
+}
+
+.contact-input .MuiOutlinedInput-root {
+  border-radius: 12px !important;
+}
+
+.contact-input .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #0b3c5d !important;
+}
+
+.contact-input .Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #0b3c5d !important;
+}
+
+.submit-button {
+  background-color: #f9a825 !important;
+  color: white !important;
+  padding: 12px !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  font-size: 1.1rem !important;
+  box-shadow: 0 4px 6px -1px rgba(249, 168, 37, 0.4) !important;
+  transition: all 0.3s ease !important;
+}
+
+.submit-button:hover {
+  background-color: #f57f17 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(249, 168, 37, 0.5) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 60px 0;
+  }
+  .form-card {
+    margin-top: 40px;
+  }
+}

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Admissions from "../components/LandingPage/Admissions";
 import Testimonials from "../components/Testimonials/Testimonials";
 import AboutSummary from "../components/AboutSummary/AboutSummary";
+import PrincipalsMessage from "../components/PrincipalsMessage/PrincipalsMessage";
 import CoreFeatures from "../components/CoreFeatures/CoreFeatures";
 import Hero_1 from "../assets/hero_1.jpg";
 
@@ -57,6 +58,9 @@ const Homepage = () => {
       <Box sx={{ py: 6 }}>
         <Testimonials />
       </Box>
+
+      {/* PRINCIPAL'S MESSAGE */}
+      <PrincipalsMessage />
 
       {/* FOOTER */}
       {/* <Box sx={{ backgroundColor: "#0b3c5d", color: "white", py: 4 }}>

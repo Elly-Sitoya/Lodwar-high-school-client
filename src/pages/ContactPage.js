@@ -1,92 +1,79 @@
 import React from "react";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
+import ContactUs from "../components/ContactUs/ContactUs";
 
 const ContactPage = () => {
   return (
     <Box>
-      {/* HERO */}
-      <Box sx={{ backgroundColor: "#0b3c5d", color: "white", py: 6 }}>
+      {/* HERO SECTION */}
+      <Box
+        sx={{
+          backgroundColor: "#0b3c5d",
+          color: "white",
+          py: 10,
+          textAlign: "center",
+          backgroundImage:
+            "linear-gradient(rgba(11, 60, 93, 0.85), rgba(11, 60, 93, 0.85)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
         <Container>
-          <Typography variant="h3" fontWeight="bold">
-            Contact Us
+          <Typography
+            variant="h2"
+            fontWeight="bold"
+            sx={{
+              mb: 2,
+              fontSize: { xs: "2.5rem", md: "3.5rem" },
+              letterSpacing: "-0.02em",
+            }}
+          >
+            Get In Touch
           </Typography>
-          <Typography sx={{ mt: 2, maxWidth: 700 }}>
-            Get in touch with Lodwar High School for inquiries, admissions
-            support, or general information.
+          <Typography
+            variant="h6"
+            sx={{
+              opacity: 0.9,
+              maxWidth: 700,
+              mx: "auto",
+              lineHeight: 1.6,
+              fontWeight: 400,
+            }}
+          >
+            Have a question or need assistance? Reach out to the Lodwar High
+            School team. We're committed to providing the support you need for
+            admissions, inquiries, and more.
           </Typography>
         </Container>
       </Box>
 
-      {/* CONTACT DETAILS */}
-      <Container sx={{ py: 6 }}>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
-            <Typography variant="h4" fontWeight="bold">
-              School Contacts
-            </Typography>
-            <Typography sx={{ mt: 2 }}>
-              <strong>Address:</strong> P.O. Box 123, Lodwar, Kenya
-            </Typography>
-            <Typography sx={{ mt: 1 }}>
-              <strong>Phone:</strong> +254 7XX XXX XXX
-            </Typography>
-            <Typography sx={{ mt: 1 }}>
-              <strong>Email:</strong> info@lodwarhighschool.ac.ke
-            </Typography>
-            <Typography sx={{ mt: 1 }}>
-              <strong>Office Hours:</strong> Monday – Friday, 8:00am – 5:00pm
-            </Typography>
-          </Grid>
+      {/* CONTACT COMPONENT */}
+      <ContactUs />
 
-          {/* CONTACT FORM */}
-          <Grid item xs={12} md={6}>
-            <Typography variant="h4" fontWeight="bold">
-              Send Us a Message
-            </Typography>
-            <Box component="form" sx={{ mt: 2 }}>
-              <input placeholder="Full Name" style={inputStyle} />
-              <input placeholder="Email Address" style={inputStyle} />
-              <textarea
-                placeholder="Your Message"
-                rows={4}
-                style={inputStyle}
-              />
-              <Button
-                variant="contained"
-                sx={{ mt: 2, backgroundColor: "#f9a825" }}
-              >
-                Submit Message
-              </Button>
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
-
-      {/* MAP */}
-      <Box sx={{ backgroundColor: "#f5f5f5", py: 6 }}>
+      {/* MAP SECTION */}
+      <Box sx={{ backgroundColor: "#fff", py: 8 }}>
         <Container>
-          <Typography variant="h4" fontWeight="bold" sx={{ mb: 2 }}>
-            Our Location
-          </Typography>
-          <iframe
-            title="School Location"
-            src="https://maps.google.com/maps?q=lodwar&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            style={{ width: "100%", height: "400px", border: 0 }}
-            loading="lazy"
-          ></iframe>
+          <Box
+            sx={{
+              borderRadius: "24px",
+              overflow: "hidden",
+              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
+              border: "1px solid rgba(0,0,0,0.05)",
+            }}
+          >
+            <iframe
+              title="School Location"
+              src="https://maps.google.com/maps?q=lodwar&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              style={{ width: "100%", height: "450px", border: 0 }}
+              loading="lazy"
+            ></iframe>
+          </Box>
         </Container>
       </Box>
     </Box>
   );
-};
-
-// SIMPLE INPUT STYLE
-const inputStyle = {
-  width: "100%",
-  padding: "12px",
-  marginTop: "12px",
-  borderRadius: "4px",
-  border: "1px solid #ccc",
 };
 
 export default ContactPage;
