@@ -23,6 +23,7 @@ import Navbar from "./components/Navbar";
 import TendersPage from "./pages/TendersPage";
 import Footer from "./components/Footer/Footer";
 import ChapelPage from "./pages/ChapelPage";
+import RolePlaceHolder from "./pages/RolePlaceHolder";
 const App = () => {
   const { currentRole } = useSelector((state) => state.user);
 
@@ -68,22 +69,22 @@ const App = () => {
           <Footer />
         </>
       )}
-
       {currentRole === "Admin" && (
         <>
-          <AdminDashboard />
+          {/* <AdminDashboard /> */}
+          <RolePlaceHolder />
         </>
       )}
-
       {currentRole === "Student" && (
         <>
-          <StudentDashboard />
+          {/* <StudentDashboard /> */}
+          <RolePlaceHolder />
         </>
       )}
-
       {currentRole === "Teacher" && (
         <>
-          <TeacherDashboard />
+          {/* <TeacherDashboard /> */}
+          <RolePlaceHolder />
         </>
       )}
     </Router>
