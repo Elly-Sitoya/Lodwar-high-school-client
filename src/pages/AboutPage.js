@@ -13,12 +13,7 @@ import {
 import About from "../components/About/About";
 import SchoolWord from "../components/SchoolWord/SchoolWord";
 import SchoolLifeAndFacilities from "../components/SchoolLifeAndFacilities/SchoolLifeAndFacilities";
-// Placeholder images for history
-const historyImages = [
-  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b",
-  "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f",
-];
-
+import AcademicAchievements from "../components/AcademicAchievements/AcademicAchievements";
 const AboutPage = () => (
   <Box sx={{ p: { xs: 2, md: 5 } }}>
     <About />
@@ -51,44 +46,6 @@ const AboutPage = () => (
       </Typography>
       <SchoolWord />
     </Paper>
-
-    {/* History Section */}
-    <Grid container spacing={4} sx={{ mb: 4 }}>
-      <Grid item xs={12} md={6}>
-        <Typography variant="h4" fontWeight="bold" gutterBottom>
-          Our History
-        </Typography>
-        <Typography paragraph>
-          Established in 1968, Lodwar High School has emerged as a beacon of
-          learning in Turkana County. Over decades, we have expanded our
-          facilities, enriched our curriculum, and strengthened our commitment
-          to academic and character excellence.
-        </Typography>
-        <Typography paragraph>
-          Through discipline, creativity, and a relentless pursuit of knowledge,
-          our graduates have gone on to serve communities, succeed in higher
-          education, and contribute to national development.
-        </Typography>
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <Grid container spacing={2}>
-          {historyImages.map((img, i) => (
-            <Grid item xs={6} key={i}>
-              <Card>
-                <CardMedia
-                  component="img"
-                  height="150"
-                  image={img}
-                  alt="School history"
-                />
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Grid>
-    </Grid>
-
-    <Divider sx={{ mb: 4 }} />
 
     {/* Mission, Vision, Values */}
     <Grid container spacing={4} sx={{ mb: 4 }}>
@@ -136,17 +93,7 @@ const AboutPage = () => (
     <Divider sx={{ mb: 4 }} />
 
     {/* Academic Performance Highlight */}
-    <Paper sx={{ p: 4, mb: 4, backgroundColor: "#f9f9f9" }} elevation={2}>
-      <Typography variant="h4" fontWeight="bold" gutterBottom>
-        Academic Achievements
-      </Typography>
-      <Typography paragraph>
-        At Lodwar High School, academic excellence is a daily pursuit. In recent
-        years, our students have achieved excellent results, with many
-        qualifying for university and distinguished programs. Our dedicated
-        educators and supportive learning environment make this possible.
-      </Typography>
-    </Paper>
+    <AcademicAchievements />
 
     {/* Facilities & Life at School */}
     <SchoolLifeAndFacilities />

@@ -1,0 +1,148 @@
+.academic-achievements-wrapper {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0b3c5d 0%, #0d47a1 100%);
+  color: #ffffff;
+  border-radius: 20px;
+  margin: 40px 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.academic-achievements-wrapper .section-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.academic-achievements-wrapper .section-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.academic-achievements-wrapper .title-underline {
+  width: 60px;
+  height: 4px;
+  background-color: #f9a825;
+  margin: 0 auto 25px;
+  border-radius: 2px;
+}
+
+.academic-achievements-wrapper .intro-text {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+}
+
+.academic-achievements-wrapper .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-bottom: 70px;
+}
+
+.academic-achievements-wrapper .stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.academic-achievements-wrapper .stat-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.academic-achievements-wrapper .stat-icon {
+  font-size: 2.5rem;
+  color: #f9a825;
+  margin-bottom: 20px;
+}
+
+.academic-achievements-wrapper .stat-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.academic-achievements-wrapper .stat-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.academic-achievements-wrapper .stat-description {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+.academic-achievements-wrapper .pillars-container {
+  text-align: left;
+  background: #ffffff;
+  color: #0b3c5d;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.academic-achievements-wrapper .pillars-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.academic-achievements-wrapper .pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.academic-achievements-wrapper .pillar-item {
+  display: flex;
+  gap: 20px;
+}
+
+.academic-achievements-wrapper .pillar-bullet {
+  min-width: 12px;
+  height: 12px;
+  background-color: #f9a825;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+.academic-achievements-wrapper .pillar-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.academic-achievements-wrapper .pillar-text {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .academic-achievements-wrapper {
+    padding: 50px 15px;
+  }
+
+  .academic-achievements-wrapper .section-title {
+    font-size: 2rem;
+  }
+
+  .academic-achievements-wrapper .pillars-container {
+    padding: 30px 20px;
+  }
+}
