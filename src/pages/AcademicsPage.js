@@ -8,6 +8,7 @@ import {
   CardContent,
 } from "@mui/material";
 import Departments from "../components/Departments/Departments";
+import KCSEPerformance from "../components/KCSEPerformance/KCSEPerformance";
 
 const AcademicsPage = () => {
   return (
@@ -67,33 +68,7 @@ const AcademicsPage = () => {
       </Box>
 
       {/* KCSE PERFORMANCE */}
-      <Container sx={{ py: 6 }}>
-        <Typography variant="h4" fontWeight="bold">
-          KCSE Performance
-        </Typography>
-        <Typography sx={{ mt: 2, maxWidth: 800 }}>
-          Lodwar High School consistently posts strong KCSE results, with steady
-          improvement in mean scores and university admissions across
-          disciplines.
-        </Typography>
-        <Grid container spacing={4} sx={{ mt: 3 }}>
-          {[
-            "2022 Mean Grade: B-",
-            "2023 Mean Grade: B",
-            "2024 Mean Grade: B+",
-          ].map((result, index) => (
-            <Grid item xs={12} md={4} key={index}>
-              <Card>
-                <CardContent>
-                  <Typography variant="h6" fontWeight="bold">
-                    {result}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+      <KCSEPerformance />
     </Box>
   );
 };

@@ -1,0 +1,92 @@
+/* Scoped Styles for KCSE Performance Component */
+
+.kcse-performance-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.kcse-performance-section .sec-title {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.kcse-performance-section .sec-title .title {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f9a825; /* School Accent Color */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.kcse-performance-section .sec-title h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0b3c5d; /* School Primary Color */
+  line-height: 1.2em;
+}
+
+.kcse-performance-section .text-content p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.kcse-performance-section .stat-item {
+  background: #fff;
+  transition: all 0.3s ease;
+  border-color: #eee !important;
+}
+
+.kcse-performance-section .stat-item:hover {
+  transform: translateY(-5px);
+  border-color: #0b3c5d !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.kcse-performance-section .performance-card-wrapper {
+  background: #fff;
+  background: linear-gradient(145deg, #ffffff, #f0f4f8);
+}
+
+.kcse-performance-section .table {
+  margin-bottom: 0;
+}
+
+.kcse-performance-section .table thead th {
+  border-top: none;
+  font-weight: 700;
+  color: #0b3c5d;
+  background-color: rgba(11, 60, 93, 0.05);
+}
+
+.kcse-performance-section .badge {
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.kcse-performance-section .lead {
+  color: #444;
+  font-size: 1.1rem;
+}
+
+/* Responsiveness */
+@media (max-width: 991px) {
+  .kcse-performance-section {
+    padding: 60px 0;
+  }
+
+  .kcse-performance-section .sec-title h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .kcse-performance-section .image-column {
+    margin-top: 40px;
+  }
+}
