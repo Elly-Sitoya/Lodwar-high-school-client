@@ -14,6 +14,8 @@ import facility_3 from "../../assets/facility_3.jpg";
 import facility_4 from "../../assets/facility_4.jpg";
 import facility_5 from "../../assets/facility_5.jpg";
 import facility_6 from "../../assets/facility_6.jpg";
+import facility_7 from "../../assets/facility_7.jpg";
+import facility_8 from "../../assets/facility_8.jpg";
 
 const facilities = [
   {
@@ -28,7 +30,7 @@ const facilities = [
     title: "Modern Library",
     description:
       "A sanctuary for knowledge featuring a vast collection of academic books, journals, and a dedicated e-learning center.",
-    image: facility_2,
+    image: facility_8,
   },
   {
     icon: <FaRunning />,
@@ -49,7 +51,7 @@ const facilities = [
     title: "Dining & Nutrition",
     description:
       "A spacious dining hall serving balanced, nutritious meals prepared under strict hygienic standards.",
-    image: facility_5,
+    image: facility_7,
   },
   {
     icon: <FaBed />,
