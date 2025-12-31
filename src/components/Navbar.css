@@ -1,0 +1,88 @@
+.navbar {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  padding: 10px 0;
+}
+
+.navbar-scrolled {
+  background-color: rgba(11, 60, 93, 0.95) !important;
+  backdrop-filter: blur(10px);
+  padding: 5px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.nav-link {
+  position: relative;
+  font-weight: 600 !important;
+  margin: 0 5px !important;
+  text-transform: none !important;
+  font-size: 1rem !important;
+  transition: color 0.3s ease !important;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 8px;
+  left: 50%;
+  background-color: #f9a825;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  color: #f9a825 !important;
+  background-color: transparent !important;
+}
+
+.nav-link:hover::after {
+  width: 60%;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-logo-text {
+  font-weight: 800 !important;
+  letter-spacing: -0.5px !important;
+  font-family: "Outfit", sans-serif !important;
+}
+
+.school-icon-container {
+  background-color: #f9a825;
+  color: #0b3c5d;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-drawer {
+  background-color: #0b3c5d !important;
+  color: white !important;
+}
+
+.mobile-link {
+  color: white !important;
+  border-radius: 12px !important;
+  margin: 8px 16px !important;
+}
+
+.mobile-link:hover {
+  background-color: rgba(249, 168, 37, 0.1) !important;
+  color: #f9a825 !important;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 10px 0;
+  }
+}

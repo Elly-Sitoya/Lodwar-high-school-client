@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AppBar,
   Toolbar,
@@ -11,12 +11,25 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  Container,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
+import SchoolIcon from "@mui/icons-material/School";
+import { Link, useLocation } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -33,19 +46,32 @@ const Navbar = () => {
   ];
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Lodwar High
-      </Typography>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", py: 4 }}>
+      <Box className="nav-logo" sx={{ justifyContent: "center", mb: 4 }}>
+        <Box className="school-icon-container">
+          <SchoolIcon />
+        </Box>
+        <Typography
+          variant="h6"
+          className="nav-logo-text"
+          sx={{ color: "white" }}
+        >
+          Lodwar High
+        </Typography>
+      </Box>
       <List>
         {navItems.map((item) => (
           <ListItem key={item.label} disablePadding>
             <ListItemButton
               component={Link}
               to={item.path}
-              sx={{ textAlign: "center" }}
+              className="mobile-link"
+              selected={location.pathname === item.path}
             >
-              <ListItemText primary={item.label} />
+              <ListItemText
+                primary={item.label}
+                primaryTypographyProps={{ fontWeight: 600 }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
@@ -53,63 +79,91 @@ const Navbar = () => {
     </Box>
   );
 
+  const isHomePage = location.pathname === "/";
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: "#0b3c5d" }}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            Lodwar High School
-          </Typography>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "block", sm: "none" } }}
-          >
-            Lodwar High School
-          </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button
-                key={item.label}
-                color="inherit"
-                component={Link}
-                to={item.path}
+    <Box>
+      <AppBar
+        position="fixed"
+        elevation={0}
+        className={`navbar ${scrolled || !isHomePage ? "navbar-scrolled" : ""}`}
+        sx={{
+          backgroundColor:
+            scrolled || !isHomePage ? "rgba(11, 60, 93, 0.95)" : "transparent",
+        }}
+      >
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Box
+              component={Link}
+              to="/"
+              className="nav-logo"
+              sx={{ flexGrow: 1 }}
+            >
+              <Box className="school-icon-container">
+                <SchoolIcon />
+              </Box>
+              <Typography
+                variant="h5"
+                noWrap
+                className="nav-logo-text"
+                sx={{ display: { xs: "none", sm: "block" } }}
               >
-                {item.label}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
+                Lodwar High School
+              </Typography>
+              <Typography
+                variant="h6"
+                noWrap
+                className="nav-logo-text"
+                sx={{ display: { xs: "block", sm: "none" } }}
+              >
+                Lodwar High
+              </Typography>
+            </Box>
+
+            <Box sx={{ display: { xs: "none", md: "block" } }}>
+              {navItems.map((item) => (
+                <Button
+                  key={item.label}
+                  className="nav-link"
+                  component={Link}
+                  to={item.path}
+                  sx={{ color: "white" }}
+                >
+                  {item.label}
+                </Button>
+              ))}
+            </Box>
+
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ ml: 2, display: { md: "none" } }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Toolbar>
+        </Container>
       </AppBar>
-      <Box component="nav">
-        <Drawer
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": { boxSizing: "border-box", width: 240 },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </Box>
+
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{ keepMounted: true }}
+        PaperProps={{ className: "mobile-drawer" }}
+        sx={{
+          display: { xs: "block", md: "none" },
+          "& .MuiDrawer-paper": { width: 280 },
+        }}
+      >
+        {drawer}
+      </Drawer>
+
+      {/* Spacer for non-hero pages could go here if needed, 
+          but usually we handle padding in the page layout */}
     </Box>
   );
 };
