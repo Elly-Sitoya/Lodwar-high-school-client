@@ -15,6 +15,19 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close"; // Make sure to have @mui/icons-material installed, otherwise use text 'X'
 import ZoomInMapIcon from "@mui/icons-material/ZoomInMap"; // Optional icon for hover
+import galleryHero from "../assets/gallery_hero.jpg";
+import gallery_1 from "../assets/gallery_1.jpg";
+import gallery_2 from "../assets/gallery_2.jpg";
+import gallery_3 from "../assets/gallery_3.jpg";
+import gallery_4 from "../assets/gallery_4.jpg";
+import gallery_5 from "../assets/gallery_5.jpg";
+import gallery_6 from "../assets/gallery_6.jpg";
+import gallery_7 from "../assets/gallery_7.jpg";
+import gallery_8 from "../assets/gallery_8.jpg";
+import gallery_9 from "../assets/gallery_9.jpg";
+import gallery_10 from "../assets/gallery_10.jpg";
+import gallery_11 from "../assets/gallery_11.jpg";
+import gallery_12 from "../assets/gallery_12.jpg";
 
 // If icons are missing, we can fallback to text or SVGs, but standard MUI setup usually has them.
 // I will assume they might not have icons installed if it's a barebones setup,
@@ -30,73 +43,73 @@ const galleryImages = [
     id: 1,
     title: "School Assembly",
     category: "Events",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
+    image: gallery_1,
   },
   {
     id: 2,
     title: "Science Laboratory",
     category: "Academics",
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837",
+    image: gallery_2,
   },
   {
     id: 3,
     title: "Sports Day",
     category: "Sports",
-    image: "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf",
+    image: gallery_3,
   },
   {
     id: 4,
     title: "Library",
     category: "Facilities",
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba",
+    image: gallery_4,
   },
   {
     id: 5,
     title: "Computer Lab",
     category: "Facilities",
-    image: "https://images.unsplash.com/photo-1584697964154-8b25d6a2a3cf",
+    image: gallery_5,
   },
   {
     id: 6,
     title: "Classroom Session",
     category: "Academics",
-    image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f",
+    image: gallery_6,
   },
   {
     id: 7,
     title: "Prize Giving Day",
     category: "Events",
-    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4",
+    image: gallery_7,
   },
   {
     id: 8,
     title: "Football Match",
     category: "Sports",
-    image: "https://images.unsplash.com/photo-1551958219-acbc608c6377",
+    image: gallery_8,
   },
   {
     id: 9,
     title: "Chemistry Practicals",
     category: "Academics",
-    image: "https://images.unsplash.com/photo-1532187878486-d6590d140b53",
+    image: gallery_9,
   },
   {
     id: 10,
     title: "Main Gate",
     category: "Facilities",
-    image: "https://images.unsplash.com/photo-1577894703322-524d76d13016",
+    image: gallery_10,
   },
   {
     id: 11,
     title: "Music Festival",
     category: "Events",
-    image: "https://images.unsplash.com/photo-1514525253344-f81f3f7461d5",
+    image: gallery_11,
   },
   {
     id: 12,
     title: "Basketball Court",
     category: "Sports",
-    image: "https://images.unsplash.com/photo-1544919982-b61976f0ba43",
+    image: gallery_12,
   },
 ];
 
@@ -176,8 +189,7 @@ const GalleryPage = () => {
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80')",
+          backgroundImage: `url(${galleryHero})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
