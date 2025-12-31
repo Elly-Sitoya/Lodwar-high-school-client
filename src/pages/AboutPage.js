@@ -302,41 +302,77 @@ const AboutPage = () => {
         {/* Contact & Visit Section */}
         <Paper
           sx={{
-            p: { xs: 4, md: 8 },
+            p: { xs: 6, md: 10 },
             mt: 8,
-            borderRadius: "30px",
-            background: "linear-gradient(135deg, #0d47a1 0%, #062e6f 100%)",
+            borderRadius: "40px",
+            background: `linear-gradient(135deg, rgba(13, 71, 161, 0.95) 0%, rgba(21, 101, 192, 0.85) 50%, rgba(13, 71, 161, 0.95) 100%), url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
             color: "white",
             textAlign: "center",
             position: "relative",
             overflow: "hidden",
+            boxShadow: "0 25px 50px -12px rgba(13, 71, 161, 0.4)",
           }}
-          elevation={4}
+          elevation={0}
         >
-          {/* Decorative circle */}
+          {/* Decorative Elements */}
           <Box
             sx={{
               position: "absolute",
-              top: -100,
+              top: -50,
+              right: -50,
+              width: 200,
+              height: 200,
+              background: "rgba(255,255,255,0.05)",
+              borderRadius: "50%",
+              filter: "blur(40px)",
+            }}
+          />
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: -100,
               left: -100,
               width: 300,
               height: 300,
-              background: "rgba(255,255,255,0.05)",
+              background: "rgba(249, 168, 37, 0.1)",
               borderRadius: "50%",
+              filter: "blur(60px)",
             }}
           />
 
-          <Typography variant="h3" fontWeight="800" sx={{ mb: 3 }}>
+          <Typography
+            variant="h2"
+            sx={{
+              fontWeight: 900,
+              fontSize: { xs: "2.2rem", md: "3.5rem" },
+              mb: 3,
+              letterSpacing: "-0.02em",
+              textShadow: "0 5px 15px rgba(0,0,0,0.2)",
+            }}
+          >
             Join Our Journey
           </Typography>
+          <Box
+            sx={{
+              width: "60px",
+              height: "4px",
+              bgcolor: "#f9a825",
+              mx: "auto",
+              mb: 4,
+              borderRadius: "2px",
+            }}
+          />
           <Typography
             sx={{
-              maxWidth: 700,
+              maxWidth: 800,
               mx: "auto",
-              mb: 5,
-              fontSize: "1.1rem",
-              opacity: 0.9,
+              mb: 6,
+              fontSize: { xs: "1.05rem", md: "1.25rem" },
+              opacity: 0.95,
               lineHeight: 1.8,
+              fontWeight: 300,
             }}
           >
             We welcome you to visit us, learn more about our programs, and
@@ -354,12 +390,19 @@ const AboutPage = () => {
               sx={{
                 bgcolor: "#f9a825",
                 color: "white",
-                px: 5,
-                py: 1.5,
-                fontSize: "1rem",
+                px: 6,
+                py: 2,
+                fontSize: "1.1rem",
                 borderRadius: "50px",
                 fontWeight: "bold",
-                "&:hover": { bgcolor: "#f57f17" },
+                textTransform: "none",
+                boxShadow: "0 10px 20px rgba(249, 168, 37, 0.3)",
+                "&:hover": {
+                  bgcolor: "#f57f17",
+                  transform: "translateY(-3px)",
+                  boxShadow: "0 15px 25px rgba(249, 168, 37, 0.4)",
+                },
+                transition: "all 0.3s ease",
               }}
             >
               Visit Us
@@ -368,16 +411,21 @@ const AboutPage = () => {
               variant="outlined"
               sx={{
                 color: "white",
-                borderColor: "rgba(255,255,255,0.5)",
-                px: 5,
-                py: 1.5,
-                fontSize: "1rem",
+                borderColor: "rgba(255,255,255,0.4)",
+                px: 6,
+                py: 2,
+                fontSize: "1.1rem",
                 borderRadius: "50px",
                 fontWeight: "bold",
+                textTransform: "none",
+                borderWidth: "2px",
                 "&:hover": {
                   borderColor: "white",
                   bgcolor: "rgba(255,255,255,0.1)",
+                  transform: "translateY(-3px)",
+                  borderWidth: "2px",
                 },
+                transition: "all 0.3s ease",
               }}
             >
               Contact Us
