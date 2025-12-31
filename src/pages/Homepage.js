@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import { Card, CardContent } from "@mui/material";
 import { Link } from "react-router-dom";
 import Admissions from "../components/LandingPage/Admissions";
 import Testimonials from "../components/Testimonials/Testimonials";
 import AboutSummary from "../components/AboutSummary/AboutSummary";
+import CoreFeatures from "../components/CoreFeatures/CoreFeatures";
 import Hero_1 from "../assets/hero_1.jpg";
 
 const Homepage = () => {
@@ -43,36 +43,12 @@ const Homepage = () => {
       {/* ABOUT SUMMARY SECTION */}
       <AboutSummary />
 
-      {/* FEATURES */}
-      <Box sx={{ backgroundColor: "#f5f5f5", py: 6 }}>
+      {/* CORE FEATURES SECTION */}
+      <CoreFeatures />
+
+      {/* ADMISSIONS SECTION */}
+      <Box sx={{ py: 6 }}>
         <Container>
-          <Grid container spacing={4}>
-            {[
-              {
-                title: "Quality Education",
-                desc: "Highly qualified teachers and KCSE excellence.",
-              },
-              {
-                title: "Modern Facilities",
-                desc: "Well-equipped labs, library, and ICT rooms.",
-              },
-              {
-                title: "Discipline & Values",
-                desc: "Strong moral foundation and leadership training.",
-              },
-            ].map((item, index) => (
-              <Grid item xs={12} md={4} key={index}>
-                <Card sx={{ height: "100%" }}>
-                  <CardContent>
-                    <Typography variant="h6" fontWeight="bold">
-                      {item.title}
-                    </Typography>
-                    <Typography sx={{ mt: 1 }}>{item.desc}</Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
           <Admissions />
         </Container>
       </Box>
