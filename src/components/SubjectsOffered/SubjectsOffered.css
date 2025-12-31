@@ -1,0 +1,197 @@
+.subjects-offered-wrapper {
+  padding: 100px 20px;
+  background-color: #f8fafc;
+  font-family: "Open Sans", sans-serif;
+}
+
+.subjects-offered-wrapper .subjects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.subjects-offered-wrapper .subjects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Image Column */
+.subjects-offered-wrapper .image-holder {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.subjects-offered-wrapper .image-holder img {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.subjects-offered-wrapper .image-holder:hover img {
+  transform: scale(1.05);
+}
+
+.subjects-offered-wrapper .experience-tag {
+  position: absolute;
+  bottom: 40px;
+  right: -20px;
+  background: #f9a825;
+  color: #0b3c5d;
+  padding: 30px;
+  border-radius: 20px 0 0 20px;
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+}
+
+.subjects-offered-wrapper .experience-tag h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.subjects-offered-wrapper .experience-tag p {
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* Content Column */
+.subjects-offered-wrapper .sec-title .title {
+  color: #f9a825;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.subjects-offered-wrapper .sec-title h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.8rem;
+  color: #0b3c5d;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.subjects-offered-wrapper .title-underline {
+  width: 80px;
+  height: 5px;
+  background: #f9a825;
+  border-radius: 3px;
+  margin-bottom: 30px;
+}
+
+.subjects-offered-wrapper .intro-text {
+  font-size: 1.15rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.subjects-offered-wrapper .categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.subjects-offered-wrapper .category-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.subjects-offered-wrapper .category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-color: #f9a825;
+}
+
+.subjects-offered-wrapper .category-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.subjects-offered-wrapper .category-icon {
+  width: 45px;
+  height: 45px;
+  background: #0b3c5d;
+  color: #f9a825;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 1.25rem;
+}
+
+.subjects-offered-wrapper .category-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0b3c5d;
+  margin: 0;
+}
+
+.subjects-offered-wrapper .subject-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subjects-offered-wrapper .subject-list li {
+  padding: 5px 0;
+  color: #64748b;
+  font-weight: 500;
+  position: relative;
+  padding-left: 20px;
+}
+
+.subjects-offered-wrapper .subject-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #f9a825;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .subjects-offered-wrapper .subjects-grid {
+    gap: 40px;
+  }
+  .subjects-offered-wrapper .sec-title h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .subjects-offered-wrapper .subjects-grid {
+    grid-template-columns: 1fr;
+  }
+  .subjects-offered-wrapper .image-holder img {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .subjects-offered-wrapper .categories-grid {
+    grid-template-columns: 1fr;
+  }
+  .subjects-offered-wrapper .sec-title h2 {
+    font-size: 1.75rem;
+  }
+}
