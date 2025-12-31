@@ -12,16 +12,11 @@ import {
 } from "@mui/material";
 import About from "../components/About/About";
 import SchoolWord from "../components/SchoolWord/SchoolWord";
-// Placeholder images for history and facilities
+import SchoolLifeAndFacilities from "../components/SchoolLifeAndFacilities/SchoolLifeAndFacilities";
+// Placeholder images for history
 const historyImages = [
   "https://images.unsplash.com/photo-1503676260728-1c00da094a0b",
   "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f",
-];
-
-const facilitiesImages = [
-  "https://images.unsplash.com/photo-1588072432836-e10032774350",
-  "https://images.unsplash.com/photo-1531379410501-8b58f6916b18",
-  "https://images.unsplash.com/photo-1557682250-cc3f3d9ad81e",
 ];
 
 const AboutPage = () => (
@@ -154,29 +149,7 @@ const AboutPage = () => (
     </Paper>
 
     {/* Facilities & Life at School */}
-    <Typography variant="h4" fontWeight="bold" gutterBottom>
-      Life and Facilities at Lodwar
-    </Typography>
-    <Grid container spacing={3} sx={{ mb: 4 }}>
-      {facilitiesImages.map((img, i) => (
-        <Grid item xs={12} sm={6} md={4} key={i}>
-          <Card>
-            <CardMedia
-              component="img"
-              height="180"
-              image={img}
-              alt="School facility"
-            />
-            <CardContent>
-              <Typography variant="body2" color="text.secondary">
-                A glimpse into vibrant school life — academics, sports,
-                assemblies and community activities.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
+    <SchoolLifeAndFacilities />
 
     {/* Contact & Visit Section */}
     <Paper sx={{ p: 4, mb: 4 }} elevation={3}>
