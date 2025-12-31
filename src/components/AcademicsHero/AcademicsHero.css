@@ -1,0 +1,170 @@
+/* Scoped Styles for AcademicsHero */
+
+.academics-hero-wrapper.about-section {
+  position: relative;
+  padding: 120px 0 70px;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.academics-hero-wrapper .sec-title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 45px;
+}
+
+.academics-hero-wrapper .sec-title .title {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  color: #f9a825; /* School Accent Color */
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.academics-hero-wrapper .sec-title h2 {
+  position: relative;
+  display: block;
+  font-size: 40px;
+  line-height: 1.28em;
+  color: #0b3c5d; /* School Primary Color */
+  font-weight: 600;
+  padding-bottom: 18px;
+}
+
+.academics-hero-wrapper .sec-title h2:before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  bottom: 0px;
+  width: 50px;
+  height: 3px;
+  background-color: #f9a825;
+}
+
+.academics-hero-wrapper .text {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #555555;
+  font-weight: 400;
+}
+
+.academics-hero-wrapper .content-column {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.academics-hero-wrapper .content-column .inner-column {
+  position: relative;
+  padding-left: 30px;
+}
+
+.academics-hero-wrapper .btn-style-one {
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 30px;
+  color: #ffffff;
+  padding: 12px 40px;
+  font-weight: 600;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+  background-color: #0b3c5d;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.academics-hero-wrapper .btn-style-one:hover {
+  background-color: #072a42;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.academics-hero-wrapper .image-column {
+  position: relative;
+}
+
+.academics-hero-wrapper .image-column .inner-column {
+  position: relative;
+  padding-left: 80px;
+  padding-bottom: 0px;
+}
+
+.academics-hero-wrapper .image-column .inner-column:before {
+  content: "";
+  position: absolute;
+  width: calc(50% + 80px);
+  height: calc(100% + 160px);
+  top: -80px;
+  left: -3px;
+  background: transparent;
+  z-index: 0;
+  border: 44px solid rgba(11, 60, 93, 0.1);
+}
+
+.academics-hero-wrapper .author-desc {
+  position: absolute;
+  bottom: 16px;
+  z-index: 1;
+  background: #f9a825;
+  padding: 10px 15px;
+  left: 96px;
+  width: calc(100% - 152px);
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.academics-hero-wrapper .author-desc h2 {
+  font-size: 21px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
+
+.academics-hero-wrapper .author-desc span {
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-align: center;
+  color: #fff;
+  display: block;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.academics-hero-wrapper .image-1 img {
+  box-shadow: 0 30px 50px rgba(8, 13, 62, 0.15);
+  border-radius: 46px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Responsiveness */
+@media (max-width: 991px) {
+  .academics-hero-wrapper.about-section {
+    padding: 80px 0 40px;
+  }
+  .academics-hero-wrapper .content-column .inner-column {
+    padding-left: 0;
+  }
+  .academics-hero-wrapper .image-column .inner-column {
+    padding-left: 0;
+    margin-top: 50px;
+  }
+  .academics-hero-wrapper .image-column .inner-column:before {
+    display: none;
+  }
+  .academics-hero-wrapper .author-desc {
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 767px) {
+  .academics-hero-wrapper .sec-title h2 {
+    font-size: 30px;
+  }
+}

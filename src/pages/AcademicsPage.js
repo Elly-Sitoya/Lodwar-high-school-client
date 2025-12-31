@@ -9,22 +9,12 @@ import {
 } from "@mui/material";
 import Departments from "../components/Departments/Departments";
 import KCSEPerformance from "../components/KCSEPerformance/KCSEPerformance";
+import AcademicsHero from "../components/AcademicsHero/AcademicsHero";
 
 const AcademicsPage = () => {
   return (
     <Box>
-      {/* HERO */}
-      <Box sx={{ backgroundColor: "#0b3c5d", color: "white", py: 6 }}>
-        <Container>
-          <Typography variant="h3" fontWeight="bold">
-            Academics
-          </Typography>
-          <Typography sx={{ mt: 2, maxWidth: 700 }}>
-            Lodwar High School offers a balanced and rigorous academic programme
-            designed to nurture excellence, discipline, and lifelong learning.
-          </Typography>
-        </Container>
-      </Box>
+      <AcademicsHero />
 
       {/* SUBJECTS OFFERED */}
       <Container sx={{ py: 6 }}>
