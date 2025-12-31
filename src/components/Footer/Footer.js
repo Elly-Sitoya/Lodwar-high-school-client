@@ -40,7 +40,7 @@ const Footer = () => {
           {/* About Section */}
           <div className="col-lg-3 col-md-6">
             <h5 className="footer-heading mb-3">About Us</h5>
-            <p className="footer-text small">
+            <p className="small opacity-75">
               Lodwar High School is a premier institution dedicated to academic
               excellence, discipline, and character building. We nurture future
               leaders through quality education.
