@@ -22,6 +22,7 @@ import GalleryPage from "./pages/GalleryPage";
 import Navbar from "./components/Navbar";
 import TendersPage from "./pages/TendersPage";
 import Footer from "./components/Footer/Footer";
+import ChapelPage from "./pages/ChapelPage";
 const App = () => {
   const { currentRole } = useSelector((state) => state.user);
 
@@ -42,6 +43,7 @@ const App = () => {
             />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/tenders" element={<TendersPage />} />
+            <Route path="/chapel" element={<ChapelPage />} />
             {/* <Route path="/footer" element={<Footer />} /> */}
             <Route path="/choose" element={<ChooseUser visitor="normal" />} />
             <Route
