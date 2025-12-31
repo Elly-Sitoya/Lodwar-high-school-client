@@ -6,20 +6,14 @@ const Admissions = () => {
     <section className="experience-grid">
       <div className="experience-grid-text-item">
         <div className="experience-inside-text">
-          <h1>Student Admissions</h1>
           <h1>Join Lodwar High School</h1>
           <h2>Excellence Through Discipline</h2>
           <h3>
             Admission to Lodwar High School is based on merit and the Ministry
-            of Education's placement guidelines.
-            <br />
-            Prospective students must provide a government-issued Calling
-            Letter, a certified Birth Certificate, and their KCPE/KPSEA result
-            slips.
-            <br />
-            We welcome learners who are ready to embrace a culture of hard work
-            and integrity.
-            <br />
+            of Education's placement guidelines. Prospective students must
+            provide a government-issued Calling Letter, a certified Birth
+            Certificate, and their KCPE/KPSEA result slips. We welcome learners
+            who are ready to embrace a culture of hard work and integrity.
           </h3>
         </div>
       </div>

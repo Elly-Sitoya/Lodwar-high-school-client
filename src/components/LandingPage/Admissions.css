@@ -1,114 +1,132 @@
 .experience-grid {
   background-color: #242424;
-  height: calc(var(--vh, 1vh) * 90);
+  min-height: 90vh;
   display: grid;
-  grid-template-columns: 25% 35% 5% 15% 15% 5%;
-  grid-template-rows: 5% 30% 25% 35% 5%;
+  grid-template-columns: 1fr 1.4fr 0.2fr 0.6fr 0.6fr 0.2fr;
+  grid-template-rows: 50px auto auto auto 50px;
   grid-template-areas:
     "filler1 filler1 filler1 filler1 filler1 filler1"
     "text text space portraitpic portraitpic filli"
     "text text space xlandscape littlepic filli"
     "text text space xlandscape littlepic1 filli"
     "filler filler filler filler filler filler";
-  column-gap: 10px;
-  row-gap: 10px;
+  column-gap: 15px;
+  row-gap: 15px;
   padding: 0;
   margin: 0;
-}
-
-.experience-grid h1 {
-  color: azure;
-  text-align: center;
-  font-size: 5.25203vw;
-  font-family: sans-serif;
-  font-weight: 500;
-  margin: 0;
-}
-
-.experience {
-  padding-top: 2%;
-  padding-bottom: 1%;
-}
-.experience h1 {
-  text-align: center;
-  font-size: 3.25203vw;
-  font-weight: 500;
-  font-family: sans-serif;
-  color: azure;
+  overflow: hidden;
 }
 
 .experience-grid-text-item {
   grid-area: text;
+  display: flex;
+  align-items: center;
 }
+
+.experience-inside-text {
+  margin: 20px 5% 20px 10%;
+  padding-left: 20px;
+  border-left: 8px solid #0088a9;
+}
+
+.experience-inside-text h1 {
+  color: #f0fdfa;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.experience-inside-text h2 {
+  color: #f9a825;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-weight: 600;
+  margin: 15px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.experience-inside-text h3 {
+  color: rgba(240, 255, 255, 0.7);
+  font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+  font-weight: 400;
+  line-height: 1.8;
+  margin-top: 25px;
+  font-family: "Inter", sans-serif;
+}
+
 .experience-grid-portraitpic-item {
   grid-area: portraitpic;
   background: url("../../assets/adm_1.jpg") no-repeat center center;
   background-size: cover;
-  border-radius: 50px;
-  border-color: rgba(0, 136, 169, 1);
-  border-width: 0px 10px;
-  border: solid rgba(0, 136, 169, 1);
+  border-radius: 30px;
+  border: 4px solid #0088a9;
 }
+
 .experience-grid-landscape-item {
   grid-area: xlandscape;
   background: url("../../assets/adm_3.jpg") no-repeat center center;
   background-size: cover;
-  border-radius: 50px;
-  border-color: rgba(0, 136, 169, 1);
-  border-width: 0px 10px;
-  border: solid rgba(0, 136, 169, 1);
+  border-radius: 30px;
+  border: 4px solid #0088a9;
 }
+
 .experience-grid-littlepic-item {
   grid-area: littlepic;
   background: url("../../assets/adm_2.jpg") no-repeat center center;
   background-size: cover;
-  border-radius: 50px;
-  border-color: rgba(0, 136, 169, 1);
-  border-width: 0px 10px;
-  border: solid rgba(0, 136, 169, 1);
+  border-radius: 30px;
+  border: 4px solid #0088a9;
 }
+
 .experience-grid-littlepic1-item {
   grid-area: littlepic1;
   background: url("../../assets/adm_4.jpg") no-repeat center center;
   background-size: cover;
-  border-radius: 50px;
-  border-color: rgba(0, 136, 169, 1);
-  border-width: 0px 10px;
-  border: solid rgba(0, 136, 169, 1);
+  border-radius: 30px;
+  border: 4px solid #0088a9;
 }
 
-.experience-inside-text {
-  margin-right: 10%;
-  margin-left: 20%;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  border-left: 10px solid rgba(0, 136, 169, 1);
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
+  .experience-grid {
+    grid-template-columns: 1fr 1fr 0.1fr 1fr;
+    grid-template-rows: 40px auto auto 40px;
+    grid-template-areas:
+      "filler1 filler1 filler1 filler1"
+      "text text space portraitpic"
+      "text text space xlandscape"
+      "filler filler filler filler";
+  }
+  .experience-grid-littlepic-item,
+  .experience-grid-littlepic1-item {
+    display: none;
+  }
 }
-.experience-inside-text h1 {
-  text-align: center;
-  font-size: 2.25203vw;
-  font-weight: 500;
-  font-family: sans-serif;
-  color: azure;
-  text-align: left;
-  margin-left: 10px;
-}
-.experience-inside-text h2 {
-  text-align: center;
-  font-size: 1.55203vw;
-  font-weight: 500;
-  font-family: sans-serif;
-  color: rgba(240, 255, 255, 0.8);
-  text-align: left;
-  margin-left: 10px;
-}
-.experience-inside-text h3 {
-  text-align: center;
-  font-size: 1.05203vw;
-  font-weight: 500;
-  font-family: sans-serif;
-  color: rgba(240, 255, 255, 0.5);
-  text-align: left;
-  margin-left: 10px;
-  margin-top: 20px;
+
+@media (max-width: 768px) {
+  .experience-grid {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .experience-inside-text {
+    margin: 0 0 40px 0;
+    padding-left: 20px;
+  }
+
+  .experience-grid-portraitpic-item,
+  .experience-grid-landscape-item {
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    display: block;
+  }
+
+  .experience-grid-littlepic-item,
+  .experience-grid-littlepic1-item {
+    display: none;
+  }
 }
