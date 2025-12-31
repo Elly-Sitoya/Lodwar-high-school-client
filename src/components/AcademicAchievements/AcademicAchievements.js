@@ -1,11 +1,6 @@
 import React from "react";
 import "./AcademicAchievements.css";
-import {
-  FaGraduationCap,
-  FaChartLine,
-  FaTrophy,
-  FaLightbulb,
-} from "react-icons/fa";
+import { FaGraduationCap, FaAward, FaUsers, FaCrown } from "react-icons/fa";
 
 const stats = [
   {
@@ -16,19 +11,19 @@ const stats = [
       "Consistent record of qualifying students for higher education.",
   },
   {
-    icon: <FaChartLine />,
+    icon: <FaAward />,
     value: "8.4",
     label: "Mean Score (2024)",
     description: "A testament to our rigorous academic standards.",
   },
   {
-    icon: <FaTrophy />,
+    icon: <FaUsers />,
     value: "100+",
     label: "Professional Alumni",
     description: "Graduates excelling in Medicine, Engineering, and Law.",
   },
   {
-    icon: <FaLightbulb />,
+    icon: <FaCrown />,
     value: "#1",
     label: "Regional Giant",
     description: "Leading institution in Turkana County for over 50 years.",

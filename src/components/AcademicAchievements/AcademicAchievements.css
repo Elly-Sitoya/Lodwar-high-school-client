@@ -2,9 +2,9 @@
   padding: 80px 20px;
   background: linear-gradient(135deg, #0b3c5d 0%, #0d47a1 100%);
   color: #ffffff;
-  border-radius: 20px;
+  border-radius: 40px;
   margin: 40px 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 .academic-achievements-wrapper .section-content {
@@ -14,9 +14,9 @@
 }
 
 .academic-achievements-wrapper .section-title {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 15px;
 }
 
@@ -67,7 +67,7 @@
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 8px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 .academic-achievements-wrapper .stat-label {
@@ -94,9 +94,9 @@
 }
 
 .academic-achievements-wrapper .pillars-heading {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 35px;
   text-align: center;
 }
