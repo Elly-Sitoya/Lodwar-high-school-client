@@ -12,9 +12,13 @@ import {
   ListItemButton,
   ListItemText,
   Container,
+  Menu,
+  MenuItem,
+  Fade,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import SchoolIcon from "@mui/icons-material/School";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
@@ -45,6 +49,17 @@ const Navbar = () => {
     { label: "Tenders", path: "/tenders" },
   ];
 
+  const moreItems = [{ label: "Chapel", path: "/chapel" }];
+
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", py: 4 }}>
       <Box className="nav-logo" sx={{ justifyContent: "center", mb: 4 }}>
@@ -60,7 +75,7 @@ const Navbar = () => {
         </Typography>
       </Box>
       <List>
-        {navItems.map((item) => (
+        {[...navItems, ...moreItems].map((item) => (
           <ListItem key={item.label} disablePadding>
             <ListItemButton
               component={Link}
@@ -138,6 +153,50 @@ const Navbar = () => {
                   {item.label}
                 </Button>
               ))}
+              <Button
+                className="nav-link"
+                onClick={handleClick}
+                endIcon={<KeyboardArrowDownIcon />}
+                sx={{ color: "white" }}
+              >
+                More
+              </Button>
+              <Menu
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                TransitionComponent={Fade}
+                sx={{
+                  "& .MuiPaper-root": {
+                    backgroundColor: "#0b3c5d",
+                    color: "white",
+                    borderRadius: "12px",
+                    marginTop: "10px",
+                    minWidth: "180px",
+                    boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+                  },
+                }}
+              >
+                {moreItems.map((item) => (
+                  <MenuItem
+                    key={item.label}
+                    onClick={handleClose}
+                    component={Link}
+                    to={item.path}
+                    sx={{
+                      fontSize: "0.95rem",
+                      fontWeight: 600,
+                      py: 1.5,
+                      "&:hover": {
+                        backgroundColor: "rgba(249, 168, 37, 0.1)",
+                        color: "#f9a825",
+                      },
+                    }}
+                  >
+                    {item.label}
+                  </MenuItem>
+                ))}
+              </Menu>
             </Box>
 
             <IconButton
