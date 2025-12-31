@@ -4,9 +4,8 @@ import { Card, CardContent } from "@mui/material";
 import { Link } from "react-router-dom";
 import Admissions from "../components/LandingPage/Admissions";
 import Testimonials from "../components/Testimonials/Testimonials";
+import AboutSummary from "../components/AboutSummary/AboutSummary";
 import Hero_1 from "../assets/hero_1.jpg";
-import about_1 from "../assets/about_1.jpg";
-import about_2 from "../assets/about_2.jpg";
 
 const Homepage = () => {
   return (
@@ -41,27 +40,8 @@ const Homepage = () => {
         </Container>
       </Box>
 
-      {/* ABOUT SECTION */}
-      <Container sx={{ py: 6 }}>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
-            <Typography variant="h4" fontWeight="bold">
-              About Our School
-            </Typography>
-            <Typography sx={{ mt: 2 }}>
-              Lodwar High School is a leading secondary institution committed to
-              academic excellence, discipline, and holistic student development.
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <img
-              src={about_2}
-              alt="school"
-              style={{ width: "100%", borderRadius: 8 }}
-            />
-          </Grid>
-        </Grid>
-      </Container>
+      {/* ABOUT SUMMARY SECTION */}
+      <AboutSummary />
 
       {/* FEATURES */}
       <Box sx={{ backgroundColor: "#f5f5f5", py: 6 }}>
