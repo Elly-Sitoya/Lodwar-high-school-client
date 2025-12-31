@@ -1,0 +1,155 @@
+.adm-requirements-wrapper {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+}
+
+.adm-requirements-wrapper .requirements-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.adm-requirements-wrapper .requirements-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.adm-requirements-wrapper .requirements-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0b3c5d;
+  margin-bottom: 10px;
+}
+
+.adm-requirements-wrapper .title-underline {
+  width: 60px;
+  height: 4px;
+  background-color: #f9a825;
+  margin-bottom: 30px;
+  border-radius: 2px;
+}
+
+.adm-requirements-wrapper .requirements-intro {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.adm-requirements-wrapper .requirements-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.adm-requirements-wrapper .requirement-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+  transition: transform 0.2s ease;
+}
+
+.adm-requirements-wrapper .requirement-item:hover {
+  transform: translateX(10px);
+}
+
+.adm-requirements-wrapper .req-icon {
+  font-size: 1.25rem;
+  color: #f9a825;
+  display: flex;
+  align-items: center;
+}
+
+.adm-requirements-wrapper .req-text {
+  font-size: 1.05rem;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.adm-requirements-wrapper .requirements-note {
+  background-color: #f8fafc;
+  padding: 20px;
+  border-left: 4px solid #0b3c5d;
+  font-size: 0.95rem;
+  color: #64748b;
+  border-radius: 4px;
+}
+
+/* Image Section Styling */
+.adm-requirements-wrapper .image-stack {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.adm-requirements-wrapper .main-img {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.adm-requirements-wrapper .img-overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background-color: #0b3c5d;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.adm-requirements-wrapper .overlay-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.adm-requirements-wrapper .overlay-number {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f9a825;
+}
+
+.adm-requirements-wrapper .overlay-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .adm-requirements-wrapper .requirements-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .adm-requirements-wrapper .requirements-info {
+    order: 2;
+  }
+
+  .adm-requirements-wrapper .requirements-visual {
+    order: 1;
+  }
+
+  .adm-requirements-wrapper .main-img {
+    min-height: 350px;
+  }
+}
+@media (max-width: 600px) {
+  .adm-requirements-wrapper .requirements-title {
+    font-size: 2rem;
+  }
+
+  .adm-requirements-wrapper .requirements-intro {
+    font-size: 1rem;
+  }
+}

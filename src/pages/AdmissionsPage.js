@@ -10,36 +10,38 @@ import {
   Box,
 } from "@mui/material";
 import AdmProcess from "../components/AdmProcess/AdmProcess";
+import AdmRequirements from "../components/AdmRequirements/AdmRequirements";
 
 const AdmissionsPage = () => {
   return (
     <Box>
-      {/* HERO */}
-      <Box sx={{ backgroundColor: "#0b3c5d", color: "white", py: 6 }}>
-        <Container>
-          <Typography variant="h3" fontWeight="bold">
-            Admissions
-          </Typography>
-          <Typography sx={{ mt: 2, maxWidth: 700 }}>
-            Join Lodwar High School and become part of a proud tradition of
-            academic excellence, discipline, and leadership.
-          </Typography>
-        </Container>
+      {/* HERO SECTION */}
+      <Box
+        sx={{
+          backgroundColor: "#0b3c5d",
+          color: "white",
+          py: 8,
+          textAlign: "center",
+          backgroundImage:
+            "linear-gradient(rgba(11, 60, 93, 0.8), rgba(11, 60, 93, 0.8)), url('https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <Typography variant="h3" fontWeight="bold" sx={{ mb: 2 }}>
+          Admissions at Lodwar High
+        </Typography>
+        <Typography
+          variant="h6"
+          sx={{ opacity: 0.9, maxWidth: 800, mx: "auto" }}
+        >
+          Shaping leaders of tomorrow through discipline and hard work. Join our
+          vibrant community of scholars.
+        </Typography>
       </Box>
 
-      {/* REQUIREMENTS */}
-      <Container sx={{ py: 6 }}>
-        <Typography variant="h4" fontWeight="bold">
-          Admission Requirements
-        </Typography>
-        <ul style={{ marginTop: "16px", lineHeight: "2" }}>
-          <li>KCPE Result Slip or Certificate</li>
-          <li>Copy of Birth Certificate</li>
-          <li>Primary School Leaving Certificate</li>
-          <li>Two Passport Size Photographs</li>
-          <li>Transfer Letter (if applicable)</li>
-        </ul>
-      </Container>
+      {/* REQUIREMENTS SECTION */}
+      <AdmRequirements />
 
       {/* APPLICATION PROCESS */}
       <AdmProcess />
