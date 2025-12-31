@@ -28,9 +28,9 @@ const App = () => {
 
   return (
     <Router>
-      <Navbar />
       {currentRole === null && (
         <>
+          <Navbar />
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/admissions" element={<AdmissionsPage />} />
