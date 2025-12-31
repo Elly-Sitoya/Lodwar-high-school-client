@@ -79,17 +79,22 @@ const Navbar = () => {
     </Box>
   );
 
-  const isHomePage = location.pathname === "/";
+  const isTransparentPage =
+    location.pathname === "/" || location.pathname === "/gallery";
 
   return (
     <Box>
       <AppBar
         position="fixed"
         elevation={0}
-        className={`navbar ${scrolled || !isHomePage ? "navbar-scrolled" : ""}`}
+        className={`navbar ${
+          scrolled || !isTransparentPage ? "navbar-scrolled" : ""
+        }`}
         sx={{
           backgroundColor:
-            scrolled || !isHomePage ? "rgba(11, 60, 93, 0.95)" : "transparent",
+            scrolled || !isTransparentPage
+              ? "rgba(11, 60, 93, 0.95)"
+              : "transparent",
         }}
       >
         <Container maxWidth="xl">
