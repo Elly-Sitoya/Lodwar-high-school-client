@@ -65,7 +65,8 @@ const Navbar = () => {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", py: 4 }}>
       <Box className="nav-logo" sx={{ justifyContent: "center", mb: 4 }}>
         <Box className="school-icon-container">
-          <SchoolIcon />
+          {/* <SchoolIcon /> */}
+          <img src={logo} alt="Logo" />
         </Box>
         <Typography
           variant="h6"
