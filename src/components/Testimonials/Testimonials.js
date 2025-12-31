@@ -1,6 +1,8 @@
 import React from "react";
 import { Box, Container, Typography, Grid, Avatar, Paper } from "@mui/material";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
+import Parent from "../../assets/avatar_1.jpg";
+import Student from "../../assets/avatar_2.jpg";
 
 const testimonialsData = [
   {
@@ -8,8 +10,7 @@ const testimonialsData = [
     role: "Parent, Grade 12",
     quote:
       "Lodwar High School transformed my son into a disciplined and focused young man. The academic standards and moral guidance are exceptional in this region.",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    avatar: Parent,
     dark: false,
   },
   {
@@ -17,8 +18,7 @@ const testimonialsData = [
     role: "Alumni, Class of 2023",
     quote:
       "Being a student here has been the best experience. The teachers are supportive, and the facilities like the ICT labs have helped me prepare for my future in engineering.",
-    avatar:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    avatar: Student,
     dark: true,
   },
 ];

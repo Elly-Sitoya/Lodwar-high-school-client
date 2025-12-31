@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import "./PrincipalsMessage.css";
+import Principal from "../../assets/Principal_1.jpg";
 
 const PrincipalsMessage = () => {
   return (
@@ -12,14 +13,14 @@ const PrincipalsMessage = () => {
           <Grid item xs={12} md={5}>
             <Box className="image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
+                src={Principal}
                 alt="Principal"
                 className="principal-image"
               />
               <Box className="image-accent"></Box>
               <Box className="principal-badge">
                 <Typography variant="h6" fontWeight="bold">
-                  Mr. John Doe
+                  Mr. Patrick Lokwayen
                 </Typography>
                 <Typography variant="body2">School Principal</Typography>
               </Box>
