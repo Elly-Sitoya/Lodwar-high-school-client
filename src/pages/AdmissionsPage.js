@@ -13,6 +13,7 @@ import AdmProcess from "../components/AdmProcess/AdmProcess";
 import AdmRequirements from "../components/AdmRequirements/AdmRequirements";
 import AdmissionsHero from "../assets/admissions_hero.jpg";
 import AdmissionsHero2 from "../assets/admissions_hero_2.jpg";
+import { Link } from "react-router-dom";
 
 const AdmissionsPage = () => {
   return (
@@ -50,14 +51,57 @@ const AdmissionsPage = () => {
       {/* APPLY CTA */}
       <Container sx={{ py: 6, textAlign: "center" }}>
         <Typography variant="h4" fontWeight="bold">
-          Apply Now
+          Ready to Join?
         </Typography>
-        <Typography sx={{ mt: 2 }}>
-          Applications are open. Click below to begin your admission process.
+        <Typography sx={{ mt: 2, mb: 4, maxWidth: 600, mx: "auto" }}>
+          You can apply online for a faster process, or download the physical
+          admission form to fill out and submit at the school.
         </Typography>
-        <Button variant="contained" sx={{ mt: 3, backgroundColor: "#f9a825" }}>
-          Apply Online
-        </Button>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 2,
+            flexWrap: "wrap",
+          }}
+        >
+          <Button
+            variant="contained"
+            component={Link}
+            to="/onlineadmissionform"
+            sx={{
+              backgroundColor: "#f9a825",
+              "&:hover": { backgroundColor: "#e69a21" },
+              px: 4,
+              py: 1.5,
+              borderRadius: "8px",
+              fontWeight: 700,
+              textTransform: "none",
+            }}
+          >
+            Apply Online
+          </Button>
+          <Button
+            variant="outlined"
+            href="/admission_form.pdf"
+            download
+            sx={{
+              borderColor: "#0b3c5d",
+              color: "#0b3c5d",
+              "&:hover": {
+                borderColor: "#0d4c75",
+                backgroundColor: "rgba(11, 60, 93, 0.05)",
+              },
+              px: 4,
+              py: 1.5,
+              borderRadius: "8px",
+              fontWeight: 700,
+              textTransform: "none",
+            }}
+          >
+            Download Admission Form
+          </Button>
+        </Box>
       </Container>
     </Box>
   );
