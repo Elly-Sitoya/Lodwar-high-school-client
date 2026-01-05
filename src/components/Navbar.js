@@ -48,6 +48,7 @@ const Navbar = () => {
     { label: "Gallery", path: "/gallery" },
     { label: "Contact", path: "/contact" },
     { label: "Tenders", path: "/tenders" },
+    { label: "Fee Structure", path: "/fee-structure" },
   ];
 
   const moreItems = [{ label: "Chapel", path: "/chapel" }];

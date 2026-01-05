@@ -24,6 +24,7 @@ import TendersPage from "./pages/TendersPage";
 import Footer from "./components/Footer/Footer";
 import ChapelPage from "./pages/ChapelPage";
 import RolePlaceHolder from "./pages/RolePlaceHolder";
+import FeeStructure from "./pages/FeeStructure";
 const App = () => {
   const { currentRole } = useSelector((state) => state.user);
 
@@ -38,6 +39,7 @@ const App = () => {
             <Route path="/academics" element={<AcademicsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/fee-structure" element={<FeeStructure />} />
             <Route
               path="/onlineadmissionform"
               element={<OnlineAdmissionForm />}
