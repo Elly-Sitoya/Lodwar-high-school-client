@@ -56,13 +56,30 @@ const OnlineAdmissionForm = () => {
             placeholder="Any medical condition or special needs"
           ></textarea>
 
-          <Button
-            variant="contained"
-            sx={{ mt: 4, backgroundColor: "#f9a825" }}
-            fullWidth
-          >
-            Submit Application
-          </Button>
+          <Box sx={{ display: "flex", gap: 2, mt: 4 }}>
+            <Button
+              variant="contained"
+              sx={{ backgroundColor: "#f9a825", flex: 1 }}
+            >
+              Submit Application
+            </Button>
+            <Button
+              variant="outlined"
+              href="/admission_form.pdf"
+              download
+              sx={{
+                borderColor: "#0b3c5d",
+                color: "#0b3c5d",
+                flex: 1,
+                "&:hover": {
+                  borderColor: "#0d4c75",
+                  backgroundColor: "rgba(11, 60, 93, 0.05)",
+                },
+              }}
+            >
+              Download Physical Form
+            </Button>
+          </Box>
         </Box>
       </Container>
     </Box>

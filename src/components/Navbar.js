@@ -53,6 +53,7 @@ const Navbar = () => {
   const moreItems = [
     { label: "Fee Structure", path: "/fee-structure" },
     { label: "Chapel", path: "/chapel" },
+    { label: "Download Form", path: "/admission_form.pdf", isDownload: true },
   ];
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -83,8 +84,10 @@ const Navbar = () => {
         {[...navItems, ...moreItems].map((item) => (
           <ListItem key={item.label} disablePadding>
             <ListItemButton
-              component={Link}
-              to={item.path}
+              component={item.isDownload ? "a" : Link}
+              to={!item.isDownload ? item.path : undefined}
+              href={item.isDownload ? item.path : undefined}
+              download={item.isDownload}
               className="mobile-link"
               selected={location.pathname === item.path}
             >
@@ -187,12 +190,16 @@ const Navbar = () => {
                   <MenuItem
                     key={item.label}
                     onClick={handleClose}
-                    component={Link}
-                    to={item.path}
+                    component={item.isDownload ? "a" : Link}
+                    to={!item.isDownload ? item.path : undefined}
+                    href={item.isDownload ? item.path : undefined}
+                    download={item.isDownload}
                     sx={{
                       fontSize: "0.95rem",
                       fontWeight: 600,
                       py: 1.5,
+                      textDecoration: "none",
+                      color: "inherit",
                       "&:hover": {
                         backgroundColor: "rgba(249, 168, 37, 0.1)",
                         color: "#f9a825",
