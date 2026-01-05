@@ -48,10 +48,12 @@ const Navbar = () => {
     { label: "Gallery", path: "/gallery" },
     { label: "Contact", path: "/contact" },
     { label: "Tenders", path: "/tenders" },
-    { label: "Fee Structure", path: "/fee-structure" },
   ];
 
-  const moreItems = [{ label: "Chapel", path: "/chapel" }];
+  const moreItems = [
+    { label: "Fee Structure", path: "/fee-structure" },
+    { label: "Chapel", path: "/chapel" },
+  ];
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
